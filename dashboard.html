@@ -1,0 +1,724 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="ConnectWave Subscriber Portal - Pay bills, view broadband and TV plans, and raise service complaints.">
+  <title>Subscriber Dashboard | ConnectWave</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<!-- Topbar -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <span>☎ <strong>1800-555-0199</strong></span>
+      <span>|</span>
+      <span>24/7 Subscriber Dedicated Helpline</span>
+    </div>
+    <div class="topbar-right">
+      <span>Subscriber ID: <strong>CW-984210</strong></span>
+      <span>|</span>
+      <span class="badge badge-success" style="padding:2px 8px;font-size:11px">● Fiber Line Active (100M)</span>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar -->
+<header class="navbar">
+  <div class="container navinner">
+    <a class="brand" href="index.html">
+      <span class="logo">C</span>
+      <span>Connect<span style="color:var(--accent)">Wave</span></span>
+    </a>
+    <nav class="navlinks">
+      <a href="index.html">Home1</a>
+      <a href="Home2.html">Home2</a>
+      <a href="plans.html">Plans</a>
+      <a href="coverage.html">Coverage</a>
+      <a href="services.html">Services</a>
+      <a class="active" href="dashboard.html">Dashboard</a>
+      <a href="about.html">About</a>
+      <a href="support.html">Support</a>
+    </nav>
+    <div class="navactions">
+      <button class="iconbtn" onclick="toggleRTL()" aria-label="Toggle text direction">RTL</button>
+      <button class="iconbtn" onclick="toggleTheme()" aria-label="Toggle theme">◐</button>
+      <a href="signup.html" class="btn small nav-signup-btn">Sign up</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Subscriber Profile Banner -->
+  <section class="dash-header">
+    <div class="container">
+      <div class="dash-user-row">
+        <div class="dash-user-meta">
+          <div class="user-avatar">
+            AM
+            <span class="online-dot" title="Active Connection"></span>
+          </div>
+          <div class="dash-user-name">
+            <h2 style="color:var(--text);font-weight:850">Welcome back, Alex Morgan 👋</h2>
+            <p style="color:var(--muted)">
+              Subscriber ID: <strong>CW-984210</strong> &bull;
+              FTTH Fiber 100M + HD Cable &bull;
+              <span class="badge badge-success">● Active Line</span>
+            </p>
+          </div>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn" onclick="openPayModal()">💳 Pay Current Bill</button>
+          <button class="btn secondary" onclick="switchDashTab('complaints')">⚠️ Raise Complaint</button>
+          <a href="login.html" class="btn secondary small" style="align-self:center">Sign Out</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dashboard Main Container -->
+  <section class="section" style="padding-top:32px">
+    <div class="container">
+
+      <!-- 4 High-Level Metric Cards -->
+      <div class="dash-stat-grid">
+        <!-- Stat 1: Current Bill -->
+        <div class="stat-box">
+          <div class="stat-box-head">
+            <span class="stat-box-title">Current Due</span>
+            <div class="stat-box-icon">₹</div>
+          </div>
+          <div class="stat-box-value" id="statCurrentBill">₹799.00</div>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span class="badge badge-warning" id="statBillBadge">● Due by 15 Nov</span>
+            <button class="btn small" id="cardPayBtn" onclick="openPayModal()" style="padding:4px 10px;font-size:12px">Pay Now</button>
+          </div>
+        </div>
+
+        <!-- Stat 2: Active Plan -->
+        <div class="stat-box">
+          <div class="stat-box-head">
+            <span class="stat-box-title">Active Plan</span>
+            <div class="stat-box-icon">⚡</div>
+          </div>
+          <div class="stat-box-value" style="font-size:22px">Family Plus 100M</div>
+          <div class="stat-box-sub">100 Mbps Symmetrical + 180 Channels</div>
+          <div style="margin-top:8px">
+            <a href="javascript:void(0)" onclick="switchDashTab('plans')" style="color:var(--primary);font-size:12px;font-weight:750">Change Plan &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Stat 3: High-Speed Data Meter -->
+        <div class="stat-box">
+          <div class="stat-box-head">
+            <span class="stat-box-title">Data Consumed</span>
+            <div class="stat-box-icon">📊</div>
+          </div>
+          <div class="stat-box-value">542 <small style="font-size:14px;color:var(--muted)">/ 1,000 GB</small></div>
+          <div class="progress-wrap">
+            <div class="progress-bar"><div class="progress-fill" style="width:54%"></div></div>
+          </div>
+          <div class="stat-box-sub" style="display:flex;justify-content:space-between">
+            <span>458 GB remaining</span>
+            <span>Resets in 10 days</span>
+          </div>
+        </div>
+
+        <!-- Stat 4: Support & Complaints -->
+        <div class="stat-box">
+          <div class="stat-box-head">
+            <span class="stat-box-title">Open Tickets</span>
+            <div class="stat-box-icon">🎫</div>
+          </div>
+          <div class="stat-box-value" id="statOpenTickets">1</div>
+          <div class="stat-box-sub">1 ticket under field inspection</div>
+          <div style="margin-top:8px">
+            <a href="javascript:void(0)" onclick="switchDashTab('complaints')" style="color:var(--primary);font-size:12px;font-weight:750">Track Progress &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dashboard Tabs Navigation -->
+      <div class="dash-tabs">
+        <button class="dash-tab-btn active" data-tab="overview" onclick="switchDashTab('overview')">
+          <span>🏠</span> Overview
+        </button>
+        <button class="dash-tab-btn" data-tab="bills" onclick="switchDashTab('bills')">
+          <span>💳</span> Pay Bills &amp; Invoices
+        </button>
+        <button class="dash-tab-btn" data-tab="plans" onclick="switchDashTab('plans')">
+          <span>⚡</span> My Plan &amp; Add-ons
+        </button>
+        <button class="dash-tab-btn" data-tab="complaints" onclick="switchDashTab('complaints')">
+          <span>⚠️</span> Raise &amp; Track Complaints
+        </button>
+        <button class="dash-tab-btn" data-tab="diagnostics" onclick="switchDashTab('diagnostics')">
+          <span>📶</span> Speed Test &amp; Health
+        </button>
+      </div>
+
+      <!-- TAB 1: OVERVIEW PANEL -->
+      <div class="dash-panel active" id="panel-overview">
+        <div class="two-col" style="align-items:start;margin-bottom:32px">
+          <!-- Hardware & Connection Status -->
+          <div class="card" style="padding:24px">
+            <span class="eyebrow">Connection Health</span>
+            <h3 style="margin:4px 0 16px">Hardware &amp; Signal Status</h3>
+            
+            <div style="display:flex;flex-direction:column;gap:14px">
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:12px;background:var(--surface-alt);border-radius:12px">
+                <div>
+                  <strong>Fiber ONT Gateway</strong>
+                  <div style="font-size:12px;color:var(--muted)">Wi-Fi 6 Dual-Band (ConnectWave ZX-800)</div>
+                </div>
+                <span class="badge badge-success">● Online &bull; 5GHz Active</span>
+              </div>
+
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:12px;background:var(--surface-alt);border-radius:12px">
+                <div>
+                  <strong>Digital Cable TV STB</strong>
+                  <div style="font-size:12px;color:var(--muted)">4K Android Hybrid Box (STB-48192)</div>
+                </div>
+                <span class="badge badge-success">● Paired &bull; Signal 98%</span>
+              </div>
+
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:12px;background:var(--surface-alt);border-radius:12px">
+                <div>
+                  <strong>Optical Fiber Rx Power</strong>
+                  <div style="font-size:12px;color:var(--muted)">Standard Range: -14 to -24 dBm</div>
+                </div>
+                <strong style="color:var(--accent)">-18.4 dBm (Optimal)</strong>
+              </div>
+            </div>
+
+            <div style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap">
+              <button class="btn secondary small" onclick="switchDashTab('diagnostics')">Run Line Diagnostics</button>
+              <button class="btn secondary small" onclick="showToast('Reboot signal sent to router. Link will refresh in 30s.')">Reboot Router Remotely</button>
+            </div>
+          </div>
+
+          <!-- Quick Actions -->
+          <div class="card" style="padding:24px">
+            <span class="eyebrow">Subscriber Actions</span>
+            <h3 style="margin:4px 0 16px">Quick Services</h3>
+
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+              <button class="card" onclick="openPayModal()" style="padding:16px;text-align:left;cursor:pointer;border:1px solid var(--line);background:var(--surface-alt)">
+                <div style="font-size:24px;margin-bottom:6px">💳</div>
+                <strong>Pay Bill</strong>
+                <div style="font-size:12px;color:var(--muted)">UPI, Cards, NetBanking</div>
+              </button>
+
+              <button class="card" onclick="switchDashTab('plans')" style="padding:16px;text-align:left;cursor:pointer;border:1px solid var(--line);background:var(--surface-alt)">
+                <div style="font-size:24px;margin-bottom:6px">🚀</div>
+                <strong>Upgrade Speed</strong>
+                <div style="font-size:12px;color:var(--muted)">Boost up to 500 Mbps</div>
+              </button>
+
+              <button class="card" onclick="switchDashTab('complaints')" style="padding:16px;text-align:left;cursor:pointer;border:1px solid var(--line);background:var(--surface-alt)">
+                <div style="font-size:24px;margin-bottom:6px">🛠️</div>
+                <strong>Raise Ticket</strong>
+                <div style="font-size:12px;color:var(--muted)">Field support &amp; repairs</div>
+              </button>
+
+              <button class="card" onclick="switchDashTab('diagnostics')" style="padding:16px;text-align:left;cursor:pointer;border:1px solid var(--line);background:var(--surface-alt)">
+                <div style="font-size:24px;margin-bottom:6px">⚡</div>
+                <strong>Speed Test</strong>
+                <div style="font-size:12px;color:var(--muted)">Check real-time bandwidth</div>
+              </button>
+            </div>
+
+            <div style="margin-top:20px;background:var(--primary-light);border:1px solid rgba(37,99,235,0.25);padding:14px;border-radius:12px">
+              <div style="display:flex;align-items:center;gap:10px">
+                <span style="font-size:20px">🎁</span>
+                <div style="font-size:13px">
+                  <strong>Refer a Neighbour Offer:</strong> Earn ₹250 bill credit when your friend signs up for ConnectWave Fiber.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2: BILLS & PAYMENTS PANEL -->
+      <div class="dash-panel" id="panel-bills">
+        <div class="two-col" style="align-items:start;margin-bottom:32px">
+          <!-- Current Statement Summary -->
+          <div class="card" style="padding:28px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+              <div>
+                <span class="eyebrow">Current Invoice</span>
+                <h3 style="margin:2px 0 0">Billing Statement #INV-2026-NOV</h3>
+              </div>
+              <span class="badge badge-warning">Due in 10 Days</span>
+            </div>
+
+            <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed var(--line);font-size:14px">
+              <span>Billing Cycle</span>
+              <strong>01 Nov 2026 – 30 Nov 2026</strong>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed var(--line);font-size:14px">
+              <span>Base Fiber Broadband (100 Mbps Unlimited)</span>
+              <span>₹649.00</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed var(--line);font-size:14px">
+              <span>Digital Cable TV HD Pack (180+ Channels)</span>
+              <span>₹150.00</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed var(--line);font-size:14px">
+              <span>Wi-Fi 6 Router Rental</span>
+              <span style="color:var(--accent);font-weight:750">₹0.00 (Free with Plan)</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed var(--line);font-size:14px">
+              <span>GST &amp; Regulatory Charges (18%)</span>
+              <span>Included</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding-top:14px;margin-top:8px;border-top:2px solid var(--line);font-size:18px;font-weight:850">
+              <span>Total Payable Amount</span>
+              <span style="color:var(--primary)">₹799.00</span>
+            </div>
+
+            <div style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap">
+              <button class="btn" style="flex:1" onclick="openPayModal()">💳 Pay ₹799.00 Now</button>
+              <button class="btn secondary" onclick="downloadInvoice('INV-2026-NOV')">Download PDF</button>
+            </div>
+          </div>
+
+          <!-- Auto-Pay Preferences -->
+          <div class="card" style="padding:28px">
+            <span class="eyebrow">Payment Preferences</span>
+            <h3 style="margin:4px 0 16px">Automated Billing</h3>
+            
+            <p style="color:var(--muted);font-size:14px;margin-bottom:16px">
+              Never miss a renewal date. Enable Auto-Debit via UPI Mandate or Credit Card for uninterrupted internet access.
+            </p>
+
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:14px;background:var(--surface-alt);border-radius:12px;margin-bottom:14px">
+              <div>
+                <strong>Auto-Pay Mandate</strong>
+                <div style="font-size:12px;color:var(--muted)">Deducts automatically on 14th of each month</div>
+              </div>
+              <label style="cursor:pointer;font-weight:750;color:var(--primary)">
+                <input type="checkbox" checked onchange="showToast('Auto-pay preference updated!')"> Active
+              </label>
+            </div>
+
+            <div style="font-size:13px;color:var(--muted);margin-bottom:16px">
+              Primary Payment Instrument: <strong>HDFC Bank Credit Card (•••• 8821)</strong>
+            </div>
+
+            <button class="btn secondary small" onclick="openPayModal()">Change Payment Method</button>
+          </div>
+        </div>
+
+        <!-- Previous Invoices Table -->
+        <div class="section-head" style="text-align:left;margin-bottom:16px">
+          <h3 style="margin:0 0 4px">Previous Billing History &amp; Receipts</h3>
+          <p style="margin:0;font-size:14px">Download official invoices for tax and reimbursement purposes.</p>
+        </div>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Invoice #</th>
+                <th>Billing Period</th>
+                <th>Amount</th>
+                <th>Payment Date</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="invoiceTableBody">
+              <tr>
+                <td><strong>INV-2026-OCT</strong></td>
+                <td>01 Oct - 31 Oct, 2026</td>
+                <td>₹799.00</td>
+                <td>12 Oct 2026</td>
+                <td><span class="badge badge-success">● Paid (UPI)</span></td>
+                <td><button class="btn secondary small" onclick="downloadInvoice('INV-2026-OCT')">Receipt 📄</button></td>
+              </tr>
+              <tr>
+                <td><strong>INV-2026-SEP</strong></td>
+                <td>01 Sep - 30 Sep, 2026</td>
+                <td>₹799.00</td>
+                <td>10 Sep 2026</td>
+                <td><span class="badge badge-success">● Paid (Card)</span></td>
+                <td><button class="btn secondary small" onclick="downloadInvoice('INV-2026-SEP')">Receipt 📄</button></td>
+              </tr>
+              <tr>
+                <td><strong>INV-2026-AUG</strong></td>
+                <td>01 Aug - 31 Aug, 2026</td>
+                <td>₹799.00</td>
+                <td>11 Aug 2026</td>
+                <td><span class="badge badge-success">● Paid (NetBanking)</span></td>
+                <td><button class="btn secondary small" onclick="downloadInvoice('INV-2026-AUG')">Receipt 📄</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- TAB 3: MY PLAN & ADD-ONS PANEL -->
+      <div class="dash-panel" id="panel-plans">
+        <div class="card" style="padding:28px;margin-bottom:32px;background:linear-gradient(120deg,var(--surface),var(--surface-alt));border:2px solid var(--primary)">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:14px">
+            <div>
+              <span class="badge badge-primary">Current Active Subscription</span>
+              <h2 style="margin:8px 0 4px">Family Plus Combo 100 Mbps</h2>
+              <p style="color:var(--muted);margin:0">High-speed dual-band fiber internet with digital HD cable channels.</p>
+            </div>
+            <div style="text-align:right">
+              <div class="price" style="margin:0">₹799<small> / month</small></div>
+              <div style="font-size:12px;color:var(--muted)">Next billing renewal: 15 Nov 2026</div>
+            </div>
+          </div>
+
+          <div class="grid" style="margin-top:24px">
+            <div style="background:var(--surface);padding:14px;border-radius:12px;border:1px solid var(--line)">
+              <div style="font-size:12px;color:var(--muted)">Speed Tier</div>
+              <strong style="font-size:18px;color:var(--primary)">100 Mbps Symmetrical</strong>
+            </div>
+            <div style="background:var(--surface);padding:14px;border-radius:12px;border:1px solid var(--line)">
+              <div style="font-size:12px;color:var(--muted)">Cable TV Package</div>
+              <strong style="font-size:18px;color:var(--accent)">180+ Channels (55 HD)</strong>
+            </div>
+            <div style="background:var(--surface);padding:14px;border-radius:12px;border:1px solid var(--line)">
+              <div style="font-size:12px;color:var(--muted)">Included OTT Passes</div>
+              <strong style="font-size:16px">Disney+ Hotstar, SonyLIV, Zee5</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-head" style="text-align:left;margin-bottom:20px">
+          <span class="eyebrow">Need More Speed?</span>
+          <h3 style="margin:4px 0">Upgrade Your Plan Instantly</h3>
+          <p style="margin:0;font-size:14px">Your plan upgrade takes effect immediately with pro-rated billing adjustment.</p>
+        </div>
+
+        <div class="grid">
+          <article class="card plain-card">
+            <span class="eyebrow">LIGHT USER</span>
+            <h3>Essential 50</h3>
+            <div class="price">₹499<small> / month</small></div>
+            <p>Good for single users and basic web browsing.</p>
+            <ul class="list">
+              <li>50 Mbps Speed</li>
+              <li>Unlimited Data</li>
+              <li>Standard Support</li>
+            </ul>
+            <button class="btn secondary" onclick="showToast('Downgrade request scheduled for next billing cycle.')">Downgrade</button>
+          </article>
+
+          <article class="card plain-card featured">
+            <span class="featured-ribbon">CURRENT PLAN</span>
+            <span class="eyebrow">POPULAR COMBO</span>
+            <h3>Family Plus 100</h3>
+            <div class="price">₹799<small> / month</small></div>
+            <p>The perfect blend of entertainment and broadband.</p>
+            <ul class="list">
+              <li>100 Mbps Symmetrical</li>
+              <li>180+ HD Cable Channels</li>
+              <li>3 OTT Streaming Apps</li>
+            </ul>
+            <button class="btn secondary" disabled style="opacity:0.7">Currently Active</button>
+          </article>
+
+          <article class="card plain-card">
+            <span class="eyebrow">TURBO STREAM</span>
+            <h3>Ultra Entertainment</h3>
+            <div class="price">₹1,299<small> / month</small></div>
+            <p>For 4K multi-device homes, gaming, and sports fans.</p>
+            <ul class="list">
+              <li>200 Mbps Gigabit Speed</li>
+              <li>250+ HD &amp; 4K Channels</li>
+              <li>6 OTT Apps Included</li>
+              <li>Zero Lag Priority Routing</li>
+            </ul>
+            <button class="btn" onclick="showToast('Upgrading to Ultra Entertainment! New speed active in 5 minutes.')">Upgrade to Ultra &rarr;</button>
+          </article>
+        </div>
+
+        <div class="section-head" style="text-align:left;margin:40px 0 18px">
+          <span class="eyebrow">Custom Add-ons</span>
+          <h3 style="margin:4px 0">Booster Packs &amp; Channels</h3>
+        </div>
+
+        <div class="grid">
+          <div class="card" style="padding:20px;display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <strong>+200 GB High-Speed Data</strong>
+              <div style="font-size:12px;color:var(--muted)">Valid until current cycle end</div>
+              <strong style="color:var(--primary);margin-top:4px;display:block">₹99 one-time</strong>
+            </div>
+            <button class="btn small" onclick="showToast('Added 200 GB Booster to your line!')">Add</button>
+          </div>
+
+          <div class="card" style="padding:20px;display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <strong>Live Sports HD Channel Pack</strong>
+              <div style="font-size:12px;color:var(--muted)">12 Star &amp; Sony Sports HD channels</div>
+              <strong style="color:var(--primary);margin-top:4px;display:block">₹75 / month</strong>
+            </div>
+            <button class="btn small" onclick="showToast('Sports HD Pack activated on Set-top Box!')">Add</button>
+          </div>
+
+          <div class="card" style="padding:20px;display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <strong>Static Public IP Address</strong>
+              <div style="font-size:12px;color:var(--muted)">Ideal for CCTV &amp; home servers</div>
+              <strong style="color:var(--primary);margin-top:4px;display:block">₹199 / month</strong>
+            </div>
+            <button class="btn small" onclick="showToast('Static IP request submitted to network team.')">Add</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 4: RAISE & TRACK COMPLAINTS PANEL -->
+      <div class="dash-panel" id="panel-complaints">
+        <div class="two-col" style="align-items:start;margin-bottom:32px">
+          
+          <!-- Raise Complaint Form -->
+          <div class="card" style="padding:28px">
+            <span class="eyebrow">Customer Care Support</span>
+            <h3 style="margin:4px 0 8px">Raise a Service Complaint</h3>
+            <p style="color:var(--muted);font-size:14px;margin-top:0">
+              Facing an issue? Submit your complaint and our field engineers will troubleshoot or visit your premises.
+            </p>
+
+            <form onsubmit="submitNewComplaint(event)">
+              <div class="field">
+                <label>Issue Category</label>
+                <div class="input-with-icon">
+                  <span class="input-icon-left">⚠️</span>
+                  <select name="category" required>
+                    <option value="Broadband - No Internet Connection">Broadband - No Internet Connection</option>
+                    <option value="Slow Speed &amp; High Ping">Slow Speed &amp; High Ping</option>
+                    <option value="Wi-Fi Router Hardware Fault">Wi-Fi Router Hardware Fault</option>
+                    <option value="Cable TV - Channel Signal Glitch / Scrambled">Cable TV - Channel Signal Glitch / Scrambled</option>
+                    <option value="Billing / Payment Discrepancy">Billing / Payment Discrepancy</option>
+                    <option value="Address Relocation Request">Address Relocation Request</option>
+                  </select>
+                </div>
+              </div>
+
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+                <div class="field">
+                  <label>Urgency Level</label>
+                  <select name="priority">
+                    <option value="Standard">Standard (Within 24h)</option>
+                    <option value="High">High (Within 6h)</option>
+                    <option value="Critical">Critical (Immediate Line Down)</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label>Preferred Visit Slot</label>
+                  <select name="slot">
+                    <option value="Morning (9 AM - 1 PM)">Morning (9 AM - 1 PM)</option>
+                    <option value="Afternoon (1 PM - 5 PM)">Afternoon (1 PM - 5 PM)</option>
+                    <option value="Evening (5 PM - 8 PM)">Evening (5 PM - 8 PM)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label>Describe the Problem</label>
+                <textarea name="description" rows="3" placeholder="Please provide details (e.g. Red optical light blinking on router, specific channels not tuning, etc.)" required></textarea>
+              </div>
+
+              <div class="field">
+                <label>Registered Phone Number</label>
+                <div class="input-with-icon">
+                  <span class="input-icon-left">📞</span>
+                  <input type="tel" value="+91 98765 43210" required>
+                </div>
+              </div>
+
+              <button class="btn" style="width:100%">Submit Complaint Ticket &rarr;</button>
+            </form>
+          </div>
+
+          <!-- Active & Resolved Complaints List -->
+          <div>
+            <div class="section-head" style="text-align:left;margin-bottom:16px">
+              <span class="eyebrow">Real-Time Tracking</span>
+              <h3 style="margin:4px 0">Your Service Tickets</h3>
+              <p style="margin:0;font-size:14px">Track resolution status and engineer dispatch live.</p>
+            </div>
+
+            <div id="complaintsListContainer">
+              <!-- Rendered dynamically via app.js -->
+            </div>
+
+            <div style="background:var(--surface-alt);border:1px dashed var(--line);border-radius:14px;padding:16px;margin-top:16px;font-size:13px;color:var(--muted)">
+              <strong>💡 Need immediate emergency assistance?</strong>
+              <div>Call our 24/7 dedicated subscriber desk directly at <strong>1800-555-0199</strong> (Toll Free).</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 5: DIAGNOSTICS & SPEED TEST PANEL -->
+      <div class="dash-panel" id="panel-diagnostics">
+        <div class="two-col" style="align-items:start">
+          <!-- Speed Test Card -->
+          <div class="card" style="padding:32px;text-align:center">
+            <span class="eyebrow">Live Speedometer</span>
+            <h3 style="margin:6px 0 12px">Test Broadband Bandwidth</h3>
+            <p style="color:var(--muted);font-size:14px;margin-top:0">Tests download and upload latency to ConnectWave Local Edge Node.</p>
+
+            <div style="width:180px;height:180px;border-radius:50%;border:10px solid var(--line);border-top-color:var(--primary);border-right-color:var(--accent);margin:20px auto;display:grid;place-items:center;font-size:38px;font-weight:900;position:relative">
+              <span id="speedValue">98.4</span>
+              <span style="font-size:12px;position:absolute;bottom:26px;color:var(--muted)">Mbps</span>
+            </div>
+
+            <div style="display:flex;justify-content:center;gap:24px;margin-bottom:20px">
+              <div>
+                <div style="font-size:12px;color:var(--muted)">Ping Latency</div>
+                <strong id="pingValue" style="font-size:18px;color:var(--accent)">7 ms</strong>
+              </div>
+              <div style="border-left:1px solid var(--line)"></div>
+              <div>
+                <div style="font-size:12px;color:var(--muted)">Upload Speed</div>
+                <strong id="uploadValue" style="font-size:18px;color:var(--primary)">96.8 Mbps</strong>
+              </div>
+            </div>
+
+            <button class="btn" id="runSpeedBtn" onclick="runSpeedTest()">Run Speed Test</button>
+          </div>
+
+          <!-- Line Health Diagnostics -->
+          <div class="card" style="padding:28px">
+            <span class="eyebrow">Network Self-Care</span>
+            <h3 style="margin:4px 0 16px">Automated Line Test</h3>
+
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <div style="padding:12px;background:var(--surface-alt);border-radius:10px;display:flex;justify-content:space-between">
+                <span>Fiber Optical Link:</span>
+                <span class="badge badge-success">✓ Synchronized</span>
+              </div>
+              <div style="padding:12px;background:var(--surface-alt);border-radius:10px;display:flex;justify-content:space-between">
+                <span>DNS Resolution:</span>
+                <span class="badge badge-success">✓ 1.1.1.1 / Responsive</span>
+              </div>
+              <div style="padding:12px;background:var(--surface-alt);border-radius:10px;display:flex;justify-content:space-between">
+                <span>Packet Loss:</span>
+                <strong style="color:var(--accent)">0.00% (Lossless)</strong>
+              </div>
+              <div style="padding:12px;background:var(--surface-alt);border-radius:10px;display:flex;justify-content:space-between">
+                <span>Cable Set-Top Box Signal:</span>
+                <span class="badge badge-success">✓ High SNR (38 dB)</span>
+              </div>
+            </div>
+
+            <div style="margin-top:24px">
+              <button class="btn secondary" style="width:100%" onclick="showToast('Self-care scan completed. All systems optimal!')">
+                🔍 Run Complete Self-Diagnostic Scan
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<!-- Interactive Payment Modal -->
+<div class="modal-overlay" id="paymentModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closePayModal()" aria-label="Close modal">&times;</button>
+    <div class="feature-icon" style="margin-bottom:8px">💳</div>
+    <h2 style="margin:0 0 4px">Quick Bill Payment</h2>
+    <p style="color:var(--muted);font-size:14px;margin-top:0">Pay your November 2026 invoice safely with instant confirmation.</p>
+
+    <div style="background:var(--surface-alt);padding:14px;border-radius:12px;display:flex;justify-content:space-between;align-items:center;margin:16px 0">
+      <div>
+        <div style="font-size:12px;color:var(--muted)">Invoice Amount Due</div>
+        <strong style="font-size:22px;color:var(--text)">₹799.00</strong>
+      </div>
+      <span class="badge badge-primary">CW-984210</span>
+    </div>
+
+    <label style="font-size:13px;font-weight:750">Select Payment Method</label>
+    <div class="pay-methods">
+      <div class="pay-method-btn selected" onclick="selectPaymentMethod('UPI', this)">
+        <div style="font-size:18px">📱</div>
+        UPI / GPay
+      </div>
+      <div class="pay-method-btn" onclick="selectPaymentMethod('Card', this)">
+        <div style="font-size:18px">💳</div>
+        Debit / Credit
+      </div>
+      <div class="pay-method-btn" onclick="selectPaymentMethod('NetBanking', this)">
+        <div style="font-size:18px">🏛️</div>
+        Net Banking
+      </div>
+    </div>
+
+    <form onsubmit="processBillPayment(event)">
+      <div id="payMethodDetails">
+        <div class="field">
+          <label>Enter UPI ID (VPA)</label>
+          <div class="input-with-icon">
+            <span class="input-icon-left">📱</span>
+            <input type="text" placeholder="alex@okhdfcbank or 984210xxxx@paytm" value="alexmorgan@okaxis" required>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted)">Supports Google Pay, PhonePe, Paytm, BHIM, and Cred UPI.</div>
+      </div>
+
+      <div style="margin-top:24px">
+        <button class="btn" id="confirmPayBtn" style="width:100%">Confirm &amp; Pay ₹799.00</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Footer (Identical Brand Name with Navbar) -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand-wrap">
+        <a class="brand" href="index.html">
+          <span class="logo">C</span>
+          <span style="color:white">Connect<span style="color:var(--accent)">Wave</span></span>
+        </a>
+        <p>Bringing high-speed gigabit fiber broadband and digital 4K cable TV together for homes and businesses.</p>
+      </div>
+      <div>
+        <h4>Explore Plans</h4>
+        <a href="plans.html">Broadband plans</a>
+        <a href="services.html">TV packages</a>
+        <a href="coverage.html">Coverage map</a>
+        <a href="about.html">About us</a>
+      </div>
+      <div>
+        <h4>Customer Care</h4>
+        <a href="dashboard.html">Subscriber dashboard</a>
+        <a href="support.html">Help centre</a>
+        <a href="support.html#faq">FAQs</a>
+        <a href="contact.html">Contact us</a>
+      </div>
+      <div>
+        <h4>Subscriber Services</h4>
+        <a href="dashboard.html">Pay bill online</a>
+        <a href="dashboard.html">Raise complaint</a>
+        <a href="login.html">Subscriber login</a>
+        <a href="signup.html">Create account</a>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>&copy; 2026 ConnectWave Communications. All rights reserved.</span>
+      <span>24/7 Helpline: 1800-555-0199</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

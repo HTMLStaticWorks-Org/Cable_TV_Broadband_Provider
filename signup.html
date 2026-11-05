@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Apply for a new ConnectWave high-speed fiber broadband and cable TV connection. Instant setup and free router.">
+  <title>Sign Up for New Connection | ConnectWave</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="auth-body">
+
+  <!-- Minimal Auth Header (No Full Navbar) -->
+  <header class="auth-header-bar">
+    <div class="container auth-header-inner">
+      <a href="index.html" class="brand">
+        <span class="logo">C</span>
+        <span>Connect<span style="color:var(--accent)">Wave</span></span>
+      </a>
+
+      <div style="display:flex;align-items:center;gap:10px">
+        <button class="iconbtn" onclick="toggleRTL()" aria-label="Toggle text direction">RTL</button>
+        <button class="iconbtn" onclick="toggleTheme()" aria-label="Toggle theme">◐</button>
+        <a href="index.html" class="btn secondary small">← Back to Home</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Sign Up Container -->
+  <main class="auth-main">
+    <div class="container" style="display:flex;justify-content:center">
+      <div class="auth-box" style="max-width:520px">
+        <div class="feature-icon" style="margin:0 auto 16px">✦</div>
+        <div style="text-align:center">
+          <h1>Apply for Connection</h1>
+          <p>Get high-speed gigabit fiber broadband &amp; 4K cable TV at your home.</p>
+        </div>
+
+        <div class="notice"></div>
+
+        <form data-demo-form>
+          <!-- Full Name -->
+          <div class="field">
+            <label for="signupName">Full Name</label>
+            <div class="input-with-icon">
+              <span class="input-icon-left">👤</span>
+              <input type="text" id="signupName" required placeholder="Your full name">
+            </div>
+          </div>
+
+          <!-- Email Address -->
+          <div class="field">
+            <label for="signupEmail">Email Address</label>
+            <div class="input-with-icon">
+              <span class="input-icon-left">✉</span>
+              <input type="email" id="signupEmail" required placeholder="you@example.com">
+            </div>
+          </div>
+
+          <!-- Mobile Number -->
+          <div class="field">
+            <label for="signupPhone">Mobile Number</label>
+            <div class="input-with-icon">
+              <span class="input-icon-left">📞</span>
+              <input type="tel" id="signupPhone" required pattern="[0-9 +()-]{10,}" placeholder="e.g. +91 98765 43210">
+            </div>
+          </div>
+
+          <!-- PIN Code -->
+          <div class="field">
+            <label for="signupPin">Installation PIN / Postal Code</label>
+            <div class="input-with-icon">
+              <span class="input-icon-left">📍</span>
+              <input type="text" id="signupPin" required placeholder="e.g. 560001">
+            </div>
+          </div>
+
+          <!-- Desired Package Selection -->
+          <div class="field">
+            <label for="signupPlanSelect">Select Plan Package</label>
+            <div class="input-with-icon">
+              <span class="input-icon-left">⚡</span>
+              <select id="signupPlanSelect">
+                <option value="familyplus100">Family Plus Combo 100 Mbps (₹799/mo) — Recommended</option>
+                <option value="essential50">Essential Connect Fiber 50 Mbps (₹499/mo)</option>
+                <option value="ultra200">Ultra Entertainment 200 Mbps (₹1,299/mo)</option>
+                <option value="gigamax500">GigaMax Pro 500 Mbps (₹1,499/mo)</option>
+                <option value="tvgold">Digital Gold 4K Cable TV (₹449/mo)</option>
+                <option value="tvsilver">Digital Silver Cable TV (₹299/mo)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Password Field with Lock Icon & Eye Toggle -->
+          <div class="field">
+            <label for="signupPassword">Create Account Password</label>
+            <div class="input-with-icon password-wrap">
+              <span class="input-icon-left">🔒</span>
+              <input type="password" id="signupPassword" required minlength="6" placeholder="At least 6 characters">
+              <button type="button" class="eye-toggle-btn" onclick="togglePasswordVisibility('signupPassword', this)" aria-label="Show password" title="Toggle password visibility">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div style="margin-top:20px">
+            <button class="btn" style="width:100%;padding:13px">Submit Connection Request &rarr;</button>
+          </div>
+
+          <div style="margin-top:22px;padding-top:18px;border-top:1px solid var(--line);text-align:center">
+            <p style="margin:0;font-size:13px;color:var(--muted)">
+              Already registered? <a href="login.html" style="color:var(--primary);font-weight:750">Sign in to Subscriber Portal</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Minimal Auth Footer (No Full Footer) -->
+  <footer class="auth-footer-bar">
+    <div class="container">
+      <div>&copy; 2026 ConnectWave Communications. All rights reserved.</div>
+      <div class="auth-footer-links">
+        <a href="support.html">Help Centre</a>
+        <span>&bull;</span>
+        <a href="coverage.html">Check Coverage</a>
+        <span>&bull;</span>
+        <a href="contact.html">Customer Care Desk</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const plan = params.get('plan');
+    if (plan) {
+      const sel = document.getElementById('signupPlanSelect');
+      if (sel) {
+        for (let i = 0; i < sel.options.length; i++) {
+          if (sel.options[i].value.toLowerCase().includes(plan.toLowerCase()) || plan.toLowerCase().includes(sel.options[i].value.toLowerCase())) {
+            sel.selectedIndex = i;
+            break;
+          }
+        }
+      }
+    }
+  </script>
+</body>
+</html>
