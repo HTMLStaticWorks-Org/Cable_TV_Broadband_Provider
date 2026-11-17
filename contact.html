@@ -8,7 +8,22 @@
     content="Contact ConnectWave - Sales enquiries, corporate connectivity, customer care desk, and technical support.">
   <title>Contact &amp; Support Desk | ConnectWave Telecom</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/style.css?v=5.0">
+  <style>
+    @media (max-width: 1024px) {
+      .nav-desktop-actions,
+      .nav-desktop-item,
+      .navactions > button:not(.hamburger-btn),
+      .navactions > a,
+      .navactions .iconbtn:not(.hamburger-btn),
+      .navactions .btn {
+        display: none !important;
+      }
+      .hamburger-btn {
+        display: inline-flex !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -61,10 +76,12 @@
         </div>
       </nav>
       <div class="navactions">
-        <button class="iconbtn nav-desktop-item" onclick="toggleRTL()" aria-label="Toggle text direction">RTL</button>
-        <button class="iconbtn nav-desktop-item" onclick="toggleTheme()" aria-label="Toggle theme">◐</button>
-        <a href="login.html" class="btn secondary small nav-desktop-item">Sign In</a>
-        <a href="signup.html" class="btn small nav-signup-btn nav-desktop-item">Sign Up</a>
+        <div class="nav-desktop-actions">
+          <button class="iconbtn" onclick="toggleRTL()" aria-label="Toggle text direction">RTL</button>
+          <button class="iconbtn" onclick="toggleTheme()" aria-label="Toggle theme">◐</button>
+          <a href="login.html" class="btn secondary small">Sign In</a>
+          <a href="signup.html" class="btn small nav-signup-btn">Sign Up</a>
+        </div>
         <button class="hamburger-btn" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
       </div>
     </div>

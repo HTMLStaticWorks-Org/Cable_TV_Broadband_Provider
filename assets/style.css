@@ -227,6 +227,12 @@ img {
   flex-shrink: 0;
 }
 
+.nav-desktop-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .nav-desktop-item {
   display: inline-flex;
   align-items: center;
@@ -1864,8 +1870,13 @@ button.card div {
     display: inline-flex !important;
   }
 
-  /* Hide desktop navbar action buttons on mobile and tablet */
-  .nav-desktop-item {
+  /* Strictly hide all desktop navbar action buttons on mobile and tablet */
+  .nav-desktop-actions,
+  .nav-desktop-item,
+  .navactions > button:not(.hamburger-btn),
+  .navactions > a,
+  .navactions .iconbtn:not(.hamburger-btn),
+  .navactions .btn {
     display: none !important;
   }
 
