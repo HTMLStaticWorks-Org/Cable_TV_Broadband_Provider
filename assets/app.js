@@ -573,6 +573,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Reset mobile nav when resizing to desktop (> 1024px)
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 1024) {
+      const navlinks = document.querySelector('.navlinks');
+      const btn = document.querySelector('.hamburger-btn');
+      if (navlinks && navlinks.classList.contains('open')) {
+        navlinks.classList.remove('open');
+        if (btn) {
+          btn.innerHTML = '☰';
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      }
+    }
+  });
+
   const modal = document.getElementById('paymentModal');
   if (modal) {
     modal.addEventListener('click', (e) => {

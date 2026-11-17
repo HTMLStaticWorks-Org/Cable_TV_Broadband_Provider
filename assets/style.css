@@ -227,6 +227,15 @@ img {
   flex-shrink: 0;
 }
 
+.nav-desktop-item {
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-menu-actions {
+  display: none;
+}
+
 .iconbtn {
   border: 1px solid var(--line);
   background: var(--surface-alt);
@@ -1852,7 +1861,16 @@ button.card div {
 /* 1024px and Below: Hamburger Menu Active (Mobile, 768, 1024) */
 @media (max-width: 1024px) {
   .hamburger-btn {
-    display: inline-flex;
+    display: inline-flex !important;
+  }
+
+  /* Hide desktop navbar action buttons on mobile and tablet */
+  .nav-desktop-item {
+    display: none !important;
+  }
+
+  .navinner {
+    position: relative;
   }
 
   .navlinks {
@@ -1865,32 +1883,105 @@ button.card div {
     border-bottom: 2px solid var(--line);
     box-shadow: var(--shadow-lg);
     flex-direction: column;
-    padding: 18px 24px 22px;
-    gap: 8px;
+    padding: 16px 20px 22px;
+    gap: 6px;
     z-index: 150;
     width: 100%;
     box-sizing: border-box;
+    max-height: calc(100vh - 74px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .navlinks.open {
     display: flex;
   }
 
-  .navlinks a {
-    padding: 10px 14px;
+  .navlinks > a {
+    padding: 12px 16px;
     font-size: 15px;
-    border-radius: 8px;
+    font-weight: 700;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    color: var(--text);
+    transition: all 0.15s ease;
+    text-decoration: none;
+  }
+
+  .navlinks > a:hover,
+  .navlinks > a.active {
+    background: var(--surface-alt);
+    color: var(--primary);
+  }
+
+  .navlinks > a.active::after {
+    display: none;
+  }
+
+  [dir="rtl"] .navlinks > a {
+    text-align: right;
+  }
+
+  /* Hamburger Menu Actions (RTL, Theme & Sign In/Up Buttons) */
+  .nav-menu-actions {
+    display: flex !important;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
     width: 100%;
     box-sizing: border-box;
   }
 
-  .navlinks a:hover,
-  .navlinks a.active {
-    background: var(--surface-alt);
+  .nav-menu-tools {
+    display: flex;
+    gap: 10px;
+    width: 100%;
   }
 
-  .navlinks a.active::after {
-    display: none;
+  .nav-menu-tools .iconbtn {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 14px;
+    font-size: 13.5px;
+    font-weight: 700;
+    border-radius: 10px;
+    min-height: 42px;
+    background: var(--surface-alt);
+    border: 1px solid var(--line);
+    color: var(--text);
+    box-sizing: border-box;
+  }
+
+  .nav-menu-tools .iconbtn:hover {
+    background: var(--surface);
+    border-color: var(--primary);
+    color: var(--primary);
+  }
+
+  .nav-menu-auth {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .nav-menu-auth .btn {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px 16px;
+    font-size: 14px;
+    font-weight: 750;
+    border-radius: 10px;
+    min-height: 42px;
+    box-sizing: border-box;
+    text-align: center;
   }
 
   .dash-stat-grid {
