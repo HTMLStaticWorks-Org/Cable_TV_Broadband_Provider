@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="ConnectWave cable TV and broadband services - Alternative modern connected home experience.">
-  <title>Home2 | ConnectWave</title>
+  <meta name="description" content="ConnectWave Smart Connected Living - Next-gen Wi-Fi 6 mesh broadband, 4K digital cable entertainment, and smart home connectivity.">
+  <title>Home2 | Smart Living &amp; Fiber Speed - ConnectWave</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -34,17 +34,18 @@
     <nav class="navlinks">
       <a href="index.html">Home1</a>
       <a class="active" href="Home2.html">Home2</a>
+      <a href="about.html">About</a>
       <a href="plans.html">Plans</a>
       <a href="coverage.html">Coverage</a>
       <a href="services.html">Services</a>
       <a href="dashboard.html">Dashboard</a>
-      <a href="about.html">About</a>
-      <a href="support.html">Support</a>
+      <a href="contact.html">Contact</a>
     </nav>
     <div class="navactions">
       <button class="iconbtn" onclick="toggleRTL()" aria-label="Toggle text direction">RTL</button>
       <button class="iconbtn" onclick="toggleTheme()" aria-label="Toggle theme">◐</button>
       <a href="signup.html" class="btn small nav-signup-btn">Sign up</a>
+      <button class="hamburger-btn" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
     </div>
   </div>
 </header>
@@ -59,7 +60,7 @@
         <p>
           Bring your favourite 4K sports, cinema premieres, and lightning-speed digital lifestyle together with ConnectWave pure optical fiber and digital cable TV.
         </p>
-        <div class="actions">
+        <div class="actions" style="display:flex;gap:12px;flex-wrap:wrap">
           <a class="btn" href="plans.html">Find your plan &rarr;</a>
           <a class="btn secondary" href="coverage.html">Check Coverage</a>
         </div>
@@ -79,7 +80,7 @@
         </div>
       </div>
       <div class="hero-img-wrap">
-        <img class="hero-img" src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?auto=format&fit=crop&w=1400&q=85" alt="Family streaming 4K entertainment on smart television with high-speed fiber internet">
+        <img class="hero-img" src="https://images.unsplash.com/photo-1584905066893-7d5c142ba4e1?auto=format&fit=crop&w=1400&q=85" alt="Cinematic connected home theater and ultra-fast broadband experience">
         <div class="hero-float-card bottom-left">
           <div style="font-size:22px">📡</div>
           <div>
@@ -91,66 +92,72 @@
     </div>
   </section>
 
-  <!-- Featured Plans Grid on Home2 -->
-  <section class="section">
+  <!-- REPLACED PRICING WITH RELEVANT SECTION: Connected Smart Home Ecosystem (Requirement 1A & 8) -->
+  <section class="section" id="smart-ecosystem">
     <div class="container">
       <div class="section-head">
-        <span class="eyebrow">Flexible Subscriptions</span>
-        <h2>Choose your connection experience</h2>
-        <p>Transparent pricing, symmetrical upload/download speeds, and zero hidden equipment rentals.</p>
+        <span class="eyebrow">Smart Home Ecosystem</span>
+        <h2>Designed for homes with dozens of connected screens</h2>
+        <p>From 4K HDR home theaters to VR headsets and IoT security, experience intelligence across your whole home.</p>
       </div>
 
-      <div class="grid">
-        <article class="card plain-card">
-          <span class="eyebrow">STARTER FIBER</span>
-          <div class="speed-tag">50 Mbps Internet</div>
-          <h3>Essential Connect</h3>
-          <div class="price">₹499<small> / month*</small></div>
-          <p>For everyday browsing, study, and standard streaming.</p>
-          <ul class="list">
-            <li>50 Mbps high-speed internet</li>
-            <li>Unlimited data allowance</li>
-            <li>Standard optical Wi-Fi router</li>
-            <li>24/7 customer care desk</li>
-          </ul>
-          <a class="btn secondary" href="signup.html?plan=essential50">Choose Plan &rarr;</a>
+      <div class="grid-4">
+        <!-- Feature 1 -->
+        <article class="card" style="padding:28px">
+          <div class="feature-icon">🌐</div>
+          <h3>Wi-Fi 6 Mesh Roaming</h3>
+          <p>Seamless whole-home roaming with automated beamforming and dynamic band steering across 3,500 sq ft.</p>
+          <div style="margin-top:16px">
+            <span class="badge badge-primary">Zero Dead Zones</span>
+          </div>
         </article>
 
-        <article class="card plain-card featured">
-          <span class="featured-ribbon">POPULAR</span>
-          <span class="eyebrow">ALL-IN-ONE COMBO</span>
-          <div class="speed-tag" style="background:var(--primary-light);color:var(--primary)">100 Mbps + 180 Channels</div>
-          <h3>Family Plus Combo</h3>
-          <div class="price">₹799<small> / month*</small></div>
-          <p>The perfect blend of entertainment and broadband for families.</p>
-          <ul class="list">
-            <li>100 Mbps symmetrical fiber</li>
-            <li>180+ HD Cable TV channels</li>
-            <li>3 Premium OTT apps included</li>
-            <li>Dual-band Wi-Fi 6 router free</li>
-          </ul>
-          <a class="btn" href="signup.html?plan=familyplus100">Choose Plan &rarr;</a>
+        <!-- Feature 2 -->
+        <article class="card" style="padding:28px">
+          <div class="feature-icon">🎮</div>
+          <h3>Gaming FastPath</h3>
+          <p>Direct fiber route peering to major gaming datacenters (AWS, Riot, Valve). Guaranteed sub-10ms ping with zero jitter.</p>
+          <div style="margin-top:16px">
+            <span class="badge badge-success">Low-Latency Mode</span>
+          </div>
         </article>
 
-        <article class="card plain-card">
-          <span class="eyebrow">ULTRA STREAM</span>
-          <div class="speed-tag">200 Mbps + 250 Channels</div>
-          <h3>Ultra Entertainment</h3>
-          <div class="price">₹1,299<small> / month*</small></div>
-          <p>For heavy streaming, 4K gaming, and multiple smart screens.</p>
-          <ul class="list">
-            <li>200 Mbps gigabit speed</li>
-            <li>250+ HD &amp; 4K channels</li>
-            <li>6 OTT apps + 4K set-top box</li>
-            <li>VIP Priority customer support</li>
-          </ul>
-          <a class="btn secondary" href="signup.html?plan=ultra200">Choose Plan &rarr;</a>
+        <!-- Feature 3 -->
+        <article class="card" style="padding:28px">
+          <div class="feature-icon">🎬</div>
+          <h3>Integrated 4K Hybrid Box</h3>
+          <p>Seamlessly switch from live satellite sports to Netflix, Hotstar, and YouTube using one single voice remote.</p>
+          <div style="margin-top:16px">
+            <span class="badge badge-warning">Dolby Atmos Audio</span>
+          </div>
         </article>
+
+        <!-- Feature 4 -->
+        <article class="card" style="padding:28px">
+          <div class="feature-icon">🛡️</div>
+          <h3>IoT Shield &amp; Security</h3>
+          <p>Built-in router-level firewall to protect smart cameras, smart locks, and children from malicious web threats.</p>
+          <div style="margin-top:16px">
+            <span class="badge badge-primary">AI Parental Controls</span>
+          </div>
+        </article>
+      </div>
+
+      <!-- Interactive Bandwidth & Screen Recommender -->
+      <div class="banner" style="margin-top:44px;background:linear-gradient(135deg, #1e1b4b, #1e3a8a, #0f766e)">
+        <div>
+          <h2>Need help choosing the right speed?</h2>
+          <p>Tell us how many screens and smart devices you run, and we'll instantly suggest the ideal broadband &amp; TV combo.</p>
+        </div>
+        <div class="banner-actions">
+          <a class="btn" style="background:#ffffff;color:#0f172a !important" href="plans.html">Browse All Packages &rarr;</a>
+          <a class="btn secondary" style="border-color:rgba(255,255,255,0.3);color:#ffffff !important;background:transparent" href="coverage.html">Check Local Feasibility</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Complete Connection Experience -->
+  <!-- Complete Connection Experience (Center Card Alignment at 768px - Requirement 28) -->
   <section class="section alt">
     <div class="container">
       <div class="section-head">
@@ -210,9 +217,26 @@
       <div class="footer-brand-wrap">
         <a class="brand" href="index.html">
           <span class="logo">C</span>
-          <span style="color:white">Connect<span style="color:var(--accent)">Wave</span></span>
+          <span>Connect<span style="color:var(--accent)">Wave</span></span>
         </a>
         <p>Bringing high-speed gigabit fiber broadband and digital 4K cable TV together for homes and businesses.</p>
+        <div class="footer-social">
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+          </a>
+          <a href="https://x.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="X (Twitter)">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.65 1.65 0 1 0 0-3.3 1.65 1.65 0 0 0 0 3.3m1.4 9.74v-8.37H5.06v8.37z"/></svg>
+          </a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="YouTube">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
       </div>
       <div>
         <h4>Explore Plans</h4>
@@ -225,7 +249,7 @@
         <h4>Customer Care</h4>
         <a href="dashboard.html">Subscriber dashboard</a>
         <a href="support.html">Help centre</a>
-        <a href="support.html#faq">FAQs</a>
+        <a href="contact.html#support">FAQs &amp; Support</a>
         <a href="contact.html">Contact us</a>
       </div>
       <div>
@@ -242,6 +266,9 @@
     </div>
   </div>
 </footer>
+
+<!-- Back to Top Button -->
+<button class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="Back to top">↑</button>
 
 <script src="assets/app.js"></script>
 </body>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="About ConnectWave - Modern cable TV and fiber broadband provider committed to quality connections.">
-  <title>About Us | ConnectWave</title>
+  <meta name="description" content="About ConnectWave - Modern cable TV and pure optical fiber broadband provider committed to quality connections, 99.98% uptime, and 24/7 care.">
+  <title>About Us | ConnectWave Telecom</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -34,17 +34,18 @@
     <nav class="navlinks">
       <a href="index.html">Home1</a>
       <a href="Home2.html">Home2</a>
+      <a class="active" href="about.html">About</a>
       <a href="plans.html">Plans</a>
       <a href="coverage.html">Coverage</a>
       <a href="services.html">Services</a>
       <a href="dashboard.html">Dashboard</a>
-      <a class="active" href="about.html">About</a>
-      <a href="support.html">Support</a>
+      <a href="contact.html">Contact</a>
     </nav>
     <div class="navactions">
       <button class="iconbtn" onclick="toggleRTL()" aria-label="Toggle text direction">RTL</button>
       <button class="iconbtn" onclick="toggleTheme()" aria-label="Toggle theme">◐</button>
       <a href="signup.html" class="btn small nav-signup-btn">Sign up</a>
+      <button class="hamburger-btn" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
     </div>
   </div>
 </header>
@@ -55,11 +56,12 @@
     <div class="container">
       <span class="eyebrow" style="color:#2dd4bf">✦ Our Mission &amp; Infrastructure</span>
       <h1>About ConnectWave</h1>
-      <p>Connecting people and households to the entertainment, ideas, and experiences that matter.</p>
+      <p>Connecting people, households, and businesses to the entertainment, ideas, and experiences that matter.</p>
     </div>
   </section>
 
-  <section class="content">
+  <!-- Section 1: Who We Are (Fixed padding/separation from Hero - Requirement 11) -->
+  <section class="section">
     <div class="container two-col">
       <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=85" alt="ConnectWave engineering and network management team">
       <div>
@@ -78,6 +80,130 @@
       </div>
     </div>
   </section>
+
+  <!-- Section 2: Core Principles & Service Values (Added Relevant Section 1 - Requirement 11) -->
+  <section class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Our Guiding Pillars</span>
+        <h2>The values that shape every connection</h2>
+        <p>Built from the ground up to solve the real everyday frustrations of telecom customers.</p>
+      </div>
+
+      <div class="grid-4">
+        <div class="card" style="padding:28px">
+          <div class="feature-icon">🛡️</div>
+          <h3>Triple Redundancy</h3>
+          <p>Underground optical fiber ring topology with automatic failover, shielding homes from weather hazards and overhead wire cuts.</p>
+        </div>
+
+        <div class="card" style="padding:28px">
+          <div class="feature-icon">⚡</div>
+          <h3>100% Symmetrical</h3>
+          <p>Equal upload and download bandwidth so video meetings, cloud backups, and content creation run with zero throttle.</p>
+        </div>
+
+        <div class="card" style="padding:28px">
+          <div class="feature-icon">⏱️</div>
+          <h3>4-Hour Resolution</h3>
+          <p>Dedicated neighborhood hubs guarantee an on-site technician visit within 4 hours whenever physical assistance is needed.</p>
+        </div>
+
+        <div class="card" style="padding:28px">
+          <div class="feature-icon">💳</div>
+          <h3>Zero Hidden Fees</h3>
+          <p>No surprise router rental hikes, no fine-print cancellation traps, and all regulatory taxes clearly itemized upfront.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Growth Journey & Network Milestones (Added Relevant Section 2 - Requirement 11) -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Our Proven Track Record</span>
+        <h2>Network milestones and expansion journey</h2>
+        <p>From our first optical exchange to a metro-wide fiber backbone powering over 150,000 households.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card" style="padding:28px;border-top:4px solid var(--primary)">
+          <span style="font-size:28px;font-weight:900;color:var(--primary)">2021</span>
+          <h3 style="margin:10px 0 8px">Underground Optical Ring</h3>
+          <p>Laid 1,200 km of carrier-neutral optical fiber rings connecting the core downtown business districts and primary postal zones.</p>
+        </div>
+
+        <div class="card" style="padding:28px;border-top:4px solid var(--accent)">
+          <span style="font-size:28px;font-weight:900;color:var(--accent)">2023</span>
+          <h3 style="margin:10px 0 8px">100K Homes &amp; 4K STB</h3>
+          <p>Surpassed 100,000 active subscribers and launched our Android 4K hybrid cable set-top box with integrated OTT apps.</p>
+        </div>
+
+        <div class="card" style="padding:28px;border-top:4px solid var(--warning)">
+          <span style="font-size:28px;font-weight:900;color:var(--warning)">2026</span>
+          <h3 style="margin:10px 0 8px">10G FTTH &amp; Mesh Wi-Fi</h3>
+          <p>Now serving 150,000+ homes with 99.98% uptime SLA, 1-click self-care subscriber dashboard, and whole-home Wi-Fi 6 mesh routers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Leadership & Engineering Operations (Added Relevant Section 3 - Requirement 11) -->
+  <section class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Executive Leadership</span>
+        <h2>Driven by experienced telecom visionaries</h2>
+        <p>Our leadership brings over 60 years of combined network engineering and customer experience expertise.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card" style="text-align:center;overflow:hidden">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&h=400&q=80" alt="Vikram Malhotra - Chief Executive Officer" style="height:240px;width:100%;object-fit:cover">
+          <div class="card-body">
+            <h3 style="margin:0 0 4px">Vikram Malhotra</h3>
+            <div style="font-size:13px;color:var(--primary);font-weight:750;margin-bottom:10px">Chief Executive Officer &amp; Co-Founder</div>
+            <p style="font-size:14px;color:var(--muted)">20+ years leading broadband infrastructure rollouts across metro regions with a focus on carrier-grade reliability.</p>
+          </div>
+        </div>
+
+        <div class="card" style="text-align:center;overflow:hidden">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&h=400&q=80" alt="Sunita Ranganathan - Chief Technology Officer" style="height:240px;width:100%;object-fit:cover">
+          <div class="card-body">
+            <h3 style="margin:0 0 4px">Sunita Ranganathan</h3>
+            <div style="font-size:13px;color:var(--accent);font-weight:750;margin-bottom:10px">Chief Technology Officer</div>
+            <p style="font-size:14px;color:var(--muted)">Former Senior Optical Architect who designed our low-latency FTTH routing topology and 4K cable transmission system.</p>
+          </div>
+        </div>
+
+        <div class="card" style="text-align:center;overflow:hidden">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&h=400&q=80" alt="Arjun Dave - VP of Field Operations" style="height:240px;width:100%;object-fit:cover">
+          <div class="card-body">
+            <h3 style="margin:0 0 4px">Arjun Dave</h3>
+            <div style="font-size:13px;color:var(--warning);font-weight:750;margin-bottom:10px">VP of Field Operations &amp; Customer Care</div>
+            <p style="font-size:14px;color:var(--muted)">Directs our 350+ rapid-response field engineers to ensure the guaranteed 4-hour on-site resolution commitment.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ready to Connect Banner -->
+  <section class="section">
+    <div class="container">
+      <div class="banner">
+        <div>
+          <h2>Ready to experience the ConnectWave difference?</h2>
+          <p>Get pure gigabit optical fiber and 4K digital cable installed at your home with zero upfront fees.</p>
+        </div>
+        <div class="banner-actions">
+          <a class="btn" style="background:#ffffff;color:#0f172a !important" href="signup.html">Book Free Installation &rarr;</a>
+          <a class="btn secondary" style="border-color:rgba(255,255,255,0.3);color:#ffffff !important;background:transparent" href="plans.html">Compare All Plans</a>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
 <!-- Footer (Identical Brand Name with Navbar) -->
@@ -87,9 +213,26 @@
       <div class="footer-brand-wrap">
         <a class="brand" href="index.html">
           <span class="logo">C</span>
-          <span style="color:white">Connect<span style="color:var(--accent)">Wave</span></span>
+          <span>Connect<span style="color:var(--accent)">Wave</span></span>
         </a>
         <p>Bringing high-speed gigabit fiber broadband and digital 4K cable TV together for homes and businesses.</p>
+        <div class="footer-social">
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+          </a>
+          <a href="https://x.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="X (Twitter)">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.65 1.65 0 1 0 0-3.3 1.65 1.65 0 0 0 0 3.3m1.4 9.74v-8.37H5.06v8.37z"/></svg>
+          </a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="YouTube">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
       </div>
       <div>
         <h4>Explore Plans</h4>
@@ -102,7 +245,7 @@
         <h4>Customer Care</h4>
         <a href="dashboard.html">Subscriber dashboard</a>
         <a href="support.html">Help centre</a>
-        <a href="support.html#faq">FAQs</a>
+        <a href="contact.html#support">FAQs &amp; Support</a>
         <a href="contact.html">Contact us</a>
       </div>
       <div>
@@ -119,6 +262,9 @@
     </div>
   </div>
 </footer>
+
+<!-- Back to Top Button -->
+<button class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="Back to top">↑</button>
 
 <script src="assets/app.js"></script>
 </body>

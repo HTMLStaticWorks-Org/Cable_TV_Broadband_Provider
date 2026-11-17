@@ -34,7 +34,7 @@ function showToast(message, duration = 3000) {
   }
   toast.innerHTML = `<span>⚡</span> <span>${message}</span>`;
   toast.classList.add('show');
-  
+
   clearTimeout(toast._timeout);
   toast._timeout = setTimeout(() => {
     toast.classList.remove('show');
@@ -218,9 +218,14 @@ function quickDemoLogin() {
 
 function switchDashTab(tabId) {
   const buttons = document.querySelectorAll('.dash-tab-btn');
+  const sidebarButtons = document.querySelectorAll('.dash-sidebar-item');
   const panels = document.querySelectorAll('.dash-panel');
 
   buttons.forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.tab === tabId);
+  });
+
+  sidebarButtons.forEach(btn => {
     btn.classList.toggle('active', btn.dataset.tab === tabId);
   });
 
@@ -228,7 +233,13 @@ function switchDashTab(tabId) {
     panel.classList.toggle('active', panel.id === `panel-${tabId}`);
   });
 
-  window.scrollTo({ top: 120, behavior: 'smooth' });
+  // Close mobile sidebar if open
+  const sidebar = document.getElementById('dashSidebar');
+  if (sidebar && sidebar.classList.contains('open')) {
+    sidebar.classList.remove('open');
+  }
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function openPayModal() {
@@ -492,7 +503,7 @@ document.addEventListener('submit', e => {
   if (f.matches('[data-demo-form]')) {
     e.preventDefault();
     if (!f.reportValidity()) return;
-    
+
     if (f.id === 'subscriberLoginForm') {
       showToast('Login successful! Redirecting to Subscriber Dashboard...');
       setTimeout(() => {
@@ -507,10 +518,61 @@ document.addEventListener('submit', e => {
   }
 });
 
+// Mobile Hamburger Menu Toggle
+function toggleMobileMenu() {
+  const navlinks = document.querySelector('.navlinks');
+  const btn = document.querySelector('.hamburger-btn');
+  if (!navlinks) return;
+  const isOpen = navlinks.classList.toggle('open');
+  if (btn) {
+    btn.innerHTML = isOpen ? '✕' : '☰';
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  }
+}
+
+// Dashboard Sidebar Toggle (Mobile / Tablet)
+function toggleDashSidebar() {
+  const sidebar = document.getElementById('dashSidebar');
+  if (sidebar) {
+    sidebar.classList.toggle('open');
+  }
+}
+
+// Back to Top Functionality
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+window.addEventListener('scroll', () => {
+  const btt = document.getElementById('backToTop');
+  if (btt) {
+    if (window.scrollY > 300) {
+      btt.classList.add('visible');
+    } else {
+      btt.classList.remove('visible');
+    }
+  }
+});
+
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
   renderComplaints();
-  
+
+  // Close mobile nav when clicking outside or clicking link
+  document.addEventListener('click', (e) => {
+    const navlinks = document.querySelector('.navlinks');
+    const btn = document.querySelector('.hamburger-btn');
+    if (navlinks && navlinks.classList.contains('open')) {
+      if (!navlinks.contains(e.target) && !btn.contains(e.target)) {
+        navlinks.classList.remove('open');
+        if (btn) {
+          btn.innerHTML = '☰';
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      }
+    }
+  });
+
   const modal = document.getElementById('paymentModal');
   if (modal) {
     modal.addEventListener('click', (e) => {

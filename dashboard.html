@@ -4,84 +4,113 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="ConnectWave Subscriber Portal - Pay bills, view broadband and TV plans, and raise service complaints.">
-  <title>Subscriber Dashboard | ConnectWave</title>
+  <title>Subscriber Dashboard | ConnectWave Portal</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
+<body style="background:var(--bg)">
 
-<!-- Topbar -->
-<div class="topbar">
-  <div class="container">
-    <div class="topbar-left">
-      <span>☎ <strong>1800-555-0199</strong></span>
-      <span>|</span>
-      <span>24/7 Subscriber Dedicated Helpline</span>
+<!-- Dedicated Dashboard SaaS Layout (Requirement 17: Navbar & Footer Removed in all devices) -->
+<div class="dash-app-layout">
+  <!-- Dedicated Sidebar Menu -->
+  <aside class="dash-sidebar" id="dashSidebar">
+    <div class="dash-sidebar-header">
+      <a class="brand" href="index.html" style="font-size:18px">
+        <span class="logo" style="width:34px;height:34px;font-size:17px;border-radius:10px">C</span>
+        <span>Connect<span style="color:var(--accent)">Wave</span></span>
+      </a>
+      <button class="iconbtn dash-sidebar-toggle" onclick="toggleDashSidebar()" aria-label="Close sidebar" style="min-height:32px;padding:4px 8px">✕</button>
     </div>
-    <div class="topbar-right">
-      <span>Subscriber ID: <strong>CW-984210</strong></span>
-      <span>|</span>
-      <span class="badge badge-success" style="padding:2px 8px;font-size:11px">● Fiber Line Active (100M)</span>
-    </div>
-  </div>
-</div>
 
-<!-- Navbar -->
-<header class="navbar">
-  <div class="container navinner">
-    <a class="brand" href="index.html">
-      <span class="logo">C</span>
-      <span>Connect<span style="color:var(--accent)">Wave</span></span>
-    </a>
-    <nav class="navlinks">
-      <a href="index.html">Home1</a>
-      <a href="Home2.html">Home2</a>
-      <a href="plans.html">Plans</a>
-      <a href="coverage.html">Coverage</a>
-      <a href="services.html">Services</a>
-      <a class="active" href="dashboard.html">Dashboard</a>
-      <a href="about.html">About</a>
-      <a href="support.html">Support</a>
+    <div style="padding:14px 18px 4px">
+      <span class="eyebrow" style="font-size:11px">Subscriber Portal</span>
+    </div>
+
+    <nav class="dash-sidebar-menu">
+      <button class="dash-sidebar-item active" data-tab="overview" onclick="switchDashTab('overview')">
+        <span style="font-size:18px">🏠</span>
+        <span>Overview</span>
+      </button>
+
+      <button class="dash-sidebar-item" data-tab="bills" onclick="switchDashTab('bills')">
+        <span style="font-size:18px">💳</span>
+        <span>Pay Bills &amp; Invoices</span>
+      </button>
+
+      <button class="dash-sidebar-item" data-tab="plans" onclick="switchDashTab('plans')">
+        <span style="font-size:18px">⚡</span>
+        <span>My Plan &amp; Add-ons</span>
+      </button>
+
+      <button class="dash-sidebar-item" data-tab="complaints" onclick="switchDashTab('complaints')">
+        <span style="font-size:18px">⚠️</span>
+        <span>Complaints &amp; Tickets</span>
+      </button>
+
+      <button class="dash-sidebar-item" data-tab="diagnostics" onclick="switchDashTab('diagnostics')">
+        <span style="font-size:18px">📶</span>
+        <span>Speed Test &amp; Health</span>
+      </button>
     </nav>
-    <div class="navactions">
-      <button class="iconbtn" onclick="toggleRTL()" aria-label="Toggle text direction">RTL</button>
-      <button class="iconbtn" onclick="toggleTheme()" aria-label="Toggle theme">◐</button>
-      <a href="signup.html" class="btn small nav-signup-btn">Sign up</a>
-    </div>
-  </div>
-</header>
 
-<main>
-  <!-- Subscriber Profile Banner -->
-  <section class="dash-header">
-    <div class="container">
-      <div class="dash-user-row">
-        <div class="dash-user-meta">
-          <div class="user-avatar">
-            AM
-            <span class="online-dot" title="Active Connection"></span>
-          </div>
-          <div class="dash-user-name">
-            <h2 style="color:var(--text);font-weight:850">Welcome back, Alex Morgan 👋</h2>
-            <p style="color:var(--muted)">
-              Subscriber ID: <strong>CW-984210</strong> &bull;
-              FTTH Fiber 100M + HD Cable &bull;
-              <span class="badge badge-success">● Active Line</span>
-            </p>
-          </div>
-        </div>
-        <div style="display:flex;gap:10px;flex-wrap:wrap">
-          <button class="btn" onclick="openPayModal()">💳 Pay Current Bill</button>
-          <button class="btn secondary" onclick="switchDashTab('complaints')">⚠️ Raise Complaint</button>
-          <a href="login.html" class="btn secondary small" style="align-self:center">Sign Out</a>
+    <div class="dash-sidebar-footer">
+      <div style="padding:10px;background:var(--surface-alt);border-radius:10px;font-size:12px;color:var(--muted);margin-bottom:6px">
+        <div>Account: <strong>Alex Morgan</strong></div>
+        <div>ID: <strong style="color:var(--primary)">CW-984210</strong></div>
+      </div>
+      <a href="index.html" class="btn secondary small" style="width:100%;box-sizing:border-box;justify-content:flex-start">
+        <span>🌐</span> Back to Website
+      </a>
+      <a href="login.html" class="btn secondary small" style="width:100%;box-sizing:border-box;justify-content:flex-start">
+        <span>🚪</span> Sign Out
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Content Area -->
+  <div class="dash-main-area">
+    <!-- Dedicated Dashboard Header Bar -->
+    <header class="dash-topbar">
+      <div class="dash-topbar-left">
+        <button class="iconbtn dash-sidebar-toggle" onclick="toggleDashSidebar()" aria-label="Toggle navigation menu">☰</button>
+        <span style="font-size:18px;font-weight:850;color:var(--text)">Subscriber Dashboard</span>
+      </div>
+
+      <div class="dash-topbar-right">
+        <button class="iconbtn" onclick="toggleRTL()" aria-label="Toggle text direction">RTL</button>
+        <button class="iconbtn" onclick="toggleTheme()" aria-label="Toggle theme">◐</button>
+        <button class="btn small" onclick="openPayModal()">💳 Pay Bill</button>
+        <div style="display:flex;align-items:center;gap:10px;padding:4px 10px;background:var(--surface-alt);border-radius:12px;border:1px solid var(--line)">
+          <div class="user-avatar" style="width:32px;height:32px;font-size:13px;border-radius:8px">AM</div>
+          <span style="font-weight:750;font-size:13px;color:var(--text)">Alex</span>
         </div>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- Dashboard Main Container -->
-  <section class="section" style="padding-top:32px">
-    <div class="container">
+    <main class="dash-content">
+      <!-- Subscriber Profile Banner (Requirement 33: Icon & user avatar placed properly in mobile view) -->
+      <section class="card" style="padding:24px;margin-bottom:28px">
+        <div class="dash-user-row">
+          <div class="dash-user-meta" style="display:flex;align-items:center;gap:14px">
+            <div class="user-avatar" style="flex-shrink:0">
+              AM
+              <span class="online-dot" title="Active Connection"></span>
+            </div>
+            <div class="dash-user-name">
+              <h2 style="color:var(--text);font-weight:850;margin:0 0 4px">Welcome back, Alex Morgan 👋</h2>
+              <p style="color:var(--muted);margin:0;font-size:13px">
+                Subscriber ID: <strong>CW-984210</strong> &bull;
+                FTTH Fiber 100M + HD Cable &bull;
+                <span class="badge badge-success">● Active Line</span>
+              </p>
+            </div>
+          </div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <button class="btn" onclick="openPayModal()">💳 Pay Current Bill</button>
+            <button class="btn secondary" onclick="switchDashTab('complaints')">⚠️ Raise Complaint</button>
+          </div>
+        </div>
+      </section>
 
       <!-- 4 High-Level Metric Cards -->
       <div class="dash-stat-grid">
@@ -141,7 +170,7 @@
         </div>
       </div>
 
-      <!-- Dashboard Tabs Navigation -->
+      <!-- Dashboard Tabs Quick Navigation Strip -->
       <div class="dash-tabs">
         <button class="dash-tab-btn active" data-tab="overview" onclick="switchDashTab('overview')">
           <span>🏠</span> Overview
@@ -160,7 +189,7 @@
         </button>
       </div>
 
-      <!-- TAB 1: OVERVIEW PANEL -->
+      <!-- TAB 1: OVERVIEW PANEL (Requirement 15: Dark Theme Text 100% Visible) -->
       <div class="dash-panel active" id="panel-overview">
         <div class="two-col" style="align-items:start;margin-bottom:32px">
           <!-- Hardware & Connection Status -->
@@ -200,33 +229,33 @@
             </div>
           </div>
 
-          <!-- Quick Actions -->
+          <!-- Quick Actions (Requirement 15: High contrast text in dark theme) -->
           <div class="card" style="padding:24px">
             <span class="eyebrow">Subscriber Actions</span>
             <h3 style="margin:4px 0 16px">Quick Services</h3>
 
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-              <button class="card" onclick="openPayModal()" style="padding:16px;text-align:left;cursor:pointer;border:1px solid var(--line);background:var(--surface-alt)">
+              <button class="card" onclick="openPayModal()" style="padding:16px;text-align:left;cursor:pointer;border:1px solid var(--line);background:var(--surface-card)">
                 <div style="font-size:24px;margin-bottom:6px">💳</div>
-                <strong>Pay Bill</strong>
+                <strong style="color:var(--text);display:block;font-size:15px;margin-bottom:2px">Pay Bill</strong>
                 <div style="font-size:12px;color:var(--muted)">UPI, Cards, NetBanking</div>
               </button>
 
-              <button class="card" onclick="switchDashTab('plans')" style="padding:16px;text-align:left;cursor:pointer;border:1px solid var(--line);background:var(--surface-alt)">
+              <button class="card" onclick="switchDashTab('plans')" style="padding:16px;text-align:left;cursor:pointer;border:1px solid var(--line);background:var(--surface-card)">
                 <div style="font-size:24px;margin-bottom:6px">🚀</div>
-                <strong>Upgrade Speed</strong>
+                <strong style="color:var(--text);display:block;font-size:15px;margin-bottom:2px">Upgrade Speed</strong>
                 <div style="font-size:12px;color:var(--muted)">Boost up to 500 Mbps</div>
               </button>
 
-              <button class="card" onclick="switchDashTab('complaints')" style="padding:16px;text-align:left;cursor:pointer;border:1px solid var(--line);background:var(--surface-alt)">
+              <button class="card" onclick="switchDashTab('complaints')" style="padding:16px;text-align:left;cursor:pointer;border:1px solid var(--line);background:var(--surface-card)">
                 <div style="font-size:24px;margin-bottom:6px">🛠️</div>
-                <strong>Raise Ticket</strong>
+                <strong style="color:var(--text);display:block;font-size:15px;margin-bottom:2px">Raise Ticket</strong>
                 <div style="font-size:12px;color:var(--muted)">Field support &amp; repairs</div>
               </button>
 
-              <button class="card" onclick="switchDashTab('diagnostics')" style="padding:16px;text-align:left;cursor:pointer;border:1px solid var(--line);background:var(--surface-alt)">
+              <button class="card" onclick="switchDashTab('diagnostics')" style="padding:16px;text-align:left;cursor:pointer;border:1px solid var(--line);background:var(--surface-card)">
                 <div style="font-size:24px;margin-bottom:6px">⚡</div>
-                <strong>Speed Test</strong>
+                <strong style="color:var(--text);display:block;font-size:15px;margin-bottom:2px">Speed Test</strong>
                 <div style="font-size:12px;color:var(--muted)">Check real-time bandwidth</div>
               </button>
             </div>
@@ -234,7 +263,7 @@
             <div style="margin-top:20px;background:var(--primary-light);border:1px solid rgba(37,99,235,0.25);padding:14px;border-radius:12px">
               <div style="display:flex;align-items:center;gap:10px">
                 <span style="font-size:20px">🎁</span>
-                <div style="font-size:13px">
+                <div style="font-size:13px;color:var(--text)">
                   <strong>Refer a Neighbour Offer:</strong> Earn ₹250 bill credit when your friend signs up for ConnectWave Fiber.
                 </div>
               </div>
@@ -362,7 +391,7 @@
         </div>
       </div>
 
-      <!-- TAB 3: MY PLAN & ADD-ONS PANEL -->
+      <!-- TAB 3: MY PLAN & ADD-ONS PANEL (Requirement 16: Center card tag aligned in middle) -->
       <div class="dash-panel" id="panel-plans">
         <div class="card" style="padding:28px;margin-bottom:32px;background:linear-gradient(120deg,var(--surface),var(--surface-alt));border:2px solid var(--primary)">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:14px">
@@ -399,6 +428,7 @@
           <p style="margin:0;font-size:14px">Your plan upgrade takes effect immediately with pro-rated billing adjustment.</p>
         </div>
 
+        <!-- 3-Card Grid with Center Card Tag in Middle (Requirement 16) -->
         <div class="grid">
           <article class="card plain-card">
             <span class="eyebrow">LIGHT USER</span>
@@ -414,6 +444,7 @@
           </article>
 
           <article class="card plain-card featured">
+            <!-- Center Card Tag Aligned in Middle -->
             <span class="featured-ribbon">CURRENT PLAN</span>
             <span class="eyebrow">POPULAR COMBO</span>
             <h3>Family Plus 100</h3>
@@ -480,7 +511,6 @@
       <!-- TAB 4: RAISE & TRACK COMPLAINTS PANEL -->
       <div class="dash-panel" id="panel-complaints">
         <div class="two-col" style="align-items:start;margin-bottom:32px">
-          
           <!-- Raise Complaint Form -->
           <div class="card" style="padding:28px">
             <span class="eyebrow">Customer Care Support</span>
@@ -623,10 +653,9 @@
           </div>
         </div>
       </div>
-
-    </div>
-  </section>
-</main>
+    </main>
+  </div>
+</div>
 
 <!-- Interactive Payment Modal -->
 <div class="modal-overlay" id="paymentModal">
@@ -678,46 +707,6 @@
     </form>
   </div>
 </div>
-
-<!-- Footer (Identical Brand Name with Navbar) -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand-wrap">
-        <a class="brand" href="index.html">
-          <span class="logo">C</span>
-          <span style="color:white">Connect<span style="color:var(--accent)">Wave</span></span>
-        </a>
-        <p>Bringing high-speed gigabit fiber broadband and digital 4K cable TV together for homes and businesses.</p>
-      </div>
-      <div>
-        <h4>Explore Plans</h4>
-        <a href="plans.html">Broadband plans</a>
-        <a href="services.html">TV packages</a>
-        <a href="coverage.html">Coverage map</a>
-        <a href="about.html">About us</a>
-      </div>
-      <div>
-        <h4>Customer Care</h4>
-        <a href="dashboard.html">Subscriber dashboard</a>
-        <a href="support.html">Help centre</a>
-        <a href="support.html#faq">FAQs</a>
-        <a href="contact.html">Contact us</a>
-      </div>
-      <div>
-        <h4>Subscriber Services</h4>
-        <a href="dashboard.html">Pay bill online</a>
-        <a href="dashboard.html">Raise complaint</a>
-        <a href="login.html">Subscriber login</a>
-        <a href="signup.html">Create account</a>
-      </div>
-    </div>
-    <div class="copyright">
-      <span>&copy; 2026 ConnectWave Communications. All rights reserved.</span>
-      <span>24/7 Helpline: 1800-555-0199</span>
-    </div>
-  </div>
-</footer>
 
 <script src="assets/app.js"></script>
 </body>
