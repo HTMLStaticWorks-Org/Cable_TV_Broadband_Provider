@@ -6,9 +6,55 @@
   <meta name="description" content="Check ConnectWave high-speed fiber broadband and cable TV coverage in your city, district, or postal code.">
   <title>Coverage Area &amp; Availability | ConnectWave</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/style.css?v=5.0">
+  <link rel="stylesheet" href="assets/style.css?v=6.0">
   <style>
     @media (max-width: 1024px) {
+      .navlinks {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--surface);
+        border-bottom: 2px solid var(--line);
+        box-shadow: var(--shadow-lg);
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+        padding: 16px 20px 22px;
+        gap: 6px;
+        z-index: 150;
+        width: 100%;
+        box-sizing: border-box;
+        max-height: calc(100vh - 74px);
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        -webkit-overflow-scrolling: touch;
+      }
+      .navlinks.open {
+        display: flex !important;
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+      }
+      .navlinks > a {
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        order: 1 !important;
+        flex-shrink: 0 !important;
+      }
+      .nav-menu-actions {
+        display: flex !important;
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        order: 999 !important;
+        margin-top: 14px !important;
+        padding-top: 16px !important;
+        padding-bottom: 6px !important;
+        border-top: 1px solid var(--line) !important;
+        flex-shrink: 0 !important;
+      }
       .nav-desktop-actions,
       .nav-desktop-item,
       .navactions > button:not(.hamburger-btn),

@@ -1,14 +1,62 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Explore high-speed optical fiber broadband and digital HD cable TV plans from ConnectWave. Find your perfect package.">
+  <meta name="description"
+    content="Explore high-speed optical fiber broadband and digital HD cable TV plans from ConnectWave. Find your perfect package.">
   <title>Plans &amp; Packages | ConnectWave</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/style.css?v=5.0">
+  <link rel="stylesheet" href="assets/style.css?v=6.0">
   <style>
     @media (max-width: 1024px) {
+      .navlinks {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--surface);
+        border-bottom: 2px solid var(--line);
+        box-shadow: var(--shadow-lg);
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+        padding: 16px 20px 22px;
+        gap: 6px;
+        z-index: 150;
+        width: 100%;
+        box-sizing: border-box;
+        max-height: calc(100vh - 74px);
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        -webkit-overflow-scrolling: touch;
+      }
+      .navlinks.open {
+        display: flex !important;
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+      }
+      .navlinks > a {
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        order: 1 !important;
+        flex-shrink: 0 !important;
+      }
+      .nav-menu-actions {
+        display: flex !important;
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        order: 999 !important;
+        margin-top: 14px !important;
+        padding-top: 16px !important;
+        padding-bottom: 6px !important;
+        border-top: 1px solid var(--line) !important;
+        flex-shrink: 0 !important;
+      }
       .nav-desktop-actions,
       .nav-desktop-item,
       .navactions > button:not(.hamburger-btn),
@@ -23,53 +71,63 @@
     }
   </style>
 </head>
+
 <body>
 
-<!-- Topbar -->
-<div class="topbar">
-  <div class="container">
-    <div class="topbar-left">
-      <span>☎ <strong>1800-555-0199</strong> (Toll-Free)</span>
-      <span>|</span>
-      <span>24/7 New Connection &amp; Plan Desk</span>
-    </div>
-    <div class="topbar-right">
-      <span>Reliable connections. Better experiences.</span>
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <span>☎ <strong>1800-555-0199</strong> (Toll-Free)</span>
+        <span>|</span>
+        <span>24/7 New Connection &amp; Plan Desk</span>
+      </div>
+      <div class="topbar-right">
+        <span>Reliable connections. Better experiences.</span>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- Navbar -->
-<header class="navbar">
-  <div class="container navinner">
-    <a class="brand" href="index.html">
-      <span class="logo">C</span>
-      <span>Connect<span style="color:var(--accent)">Wave</span></span>
-    </a>
-    <nav class="navlinks" id="navlinks">
-      <a href="index.html">Home1</a>
-      <a href="Home2.html">Home2</a>
-      <a href="about.html">About</a>
-      <a class="active" href="plans.html">Plans</a>
-      <a href="coverage.html">Coverage</a>
-      <a href="services.html">Services</a>
-      <a href="dashboard.html">Dashboard</a>
-      <a href="contact.html">Contact</a>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container navinner">
+      <a class="brand" href="index.html">
+        <span class="logo">C</span>
+        <span>Connect<span style="color:var(--accent)">Wave</span></span>
+      </a>
+      <nav class="navlinks" id="navlinks">
+        <a href="index.html">Home1</a>
+        <a href="Home2.html">Home2</a>
+        <a href="about.html">About</a>
+        <a class="active" href="plans.html">Plans</a>
+        <a href="coverage.html">Coverage</a>
+        <a href="services.html">Services</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="contact.html">Contact</a>
 
-      <!-- Mobile & Tab Actions Inside Hamburger (RTL, Theme & Sign In/Up Buttons) -->
-      <div class="nav-menu-actions">
-        <div class="nav-menu-tools">
-          <button type="button" class="iconbtn" onclick="toggleRTL()" aria-label="Toggle text direction">
-            <span>🌐</span> <span>RTL</span>
-          </button>
-          <button type="button" class="iconbtn" onclick="toggleTheme()" aria-label="Toggle theme">
-            <span>◐</span> <span>Theme</span>
-          </button>
+        <!-- Mobile & Tab Actions Inside Hamburger (RTL, Theme & Sign In/Up Buttons) -->
+        <div class="nav-menu-actions">
+          <div class="nav-menu-tools">
+            <button type="button" class="iconbtn" onclick="toggleRTL()" aria-label="Toggle text direction">
+              <span>🌐</span> <span>RTL</span>
+            </button>
+            <button type="button" class="iconbtn" onclick="toggleTheme()" aria-label="Toggle theme">
+              <span>◐</span> <span>Theme</span>
+            </button>
+          </div>
+          <div class="nav-menu-auth">
+            <a href="login.html" class="btn secondary small">Sign In</a>
+            <a href="signup.html" class="btn small nav-signup-btn">Sign Up</a>
+          </div>
         </div>
-        <div class="nav-menu-auth">
-          <a href="login.html" class="btn secondary small">Sign In</a>
-          <a href="signup.html" class="btn small nav-signup-btn">Sign Up</a>
-        </div>
+      </nav>
+      <div class="navactions">
+        <button class="iconbtn nav-desktop-item" onclick="toggleRTL()" aria-label="Toggle text direction">RTL</button>
+        <button class="iconbtn nav-desktop-item" onclick="toggleTheme()" aria-label="Toggle theme">◐</button>
+        <a href="login.html" class="btn secondary small nav-desktop-item">Sign In</a>
+        <a href="signup.html" class="btn small nav-signup-btn nav-desktop-item">Sign Up</a>
+        <button class="hamburger-btn" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu"
+          aria-expanded="false">☰</button>
       </div>
     </nav>
     <div class="navactions">
@@ -81,311 +139,339 @@
       </div>
       <button class="hamburger-btn" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
     </div>
-  </div>
-</header>
+  </header>
 
-<main>
-  <!-- Page Hero with Relevant Fiber Optics Background -->
-  <section class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1400&q=85')">
-    <div class="container">
-      <span class="eyebrow" style="color:#2dd4bf">✦ Transparent Subscriptions</span>
-      <h1>Plans made for your connected world</h1>
-      <p>
-        Choose pure optical fiber broadband, 4K digital cable TV, or our value-packed all-in-one entertainment combos.
-      </p>
-    </div>
-  </section>
-
-  <!-- Plans Selection Section -->
-  <section class="section">
-    <div class="container">
-      
-      <!-- Category Filter Tabs -->
-      <div class="filter-tabs">
-        <button class="filter-btn active" data-filter="all" onclick="filterPlans('all')">All Plans</button>
-        <button class="filter-btn" data-filter="broadband" onclick="filterPlans('broadband')">Fiber Broadband</button>
-        <button class="filter-btn" data-filter="combo" onclick="filterPlans('combo')">Broadband + TV Combos</button>
-        <button class="filter-btn" data-filter="tv" onclick="filterPlans('tv')">Cable TV Only</button>
+  <main>
+    <!-- Page Hero with Relevant Fiber Optics Background -->
+    <section class="page-hero"
+      style="background-image:url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1400&q=85')">
+      <div class="container">
+        <span class="eyebrow" style="color:#2dd4bf">✦ Transparent Subscriptions</span>
+        <h1>Plans made for your connected world</h1>
+        <p>
+          Choose pure optical fiber broadband, 4K digital cable TV, or our value-packed all-in-one entertainment combos.
+        </p>
       </div>
+    </section>
 
-      <!-- Plan Cards Grid -->
-      <div class="grid">
-        <!-- Card 1: Starter Fiber -->
-        <article class="card plain-card plan-item" data-category="broadband">
-          <span class="eyebrow">BROADBAND BASIC</span>
-          <div class="speed-tag">50 Mbps Symmetrical</div>
-          <h3>Essential Connect</h3>
-          <div class="price">₹499<small> / month*</small></div>
-          <p>For seamless everyday browsing, study, Zoom meetings, and streaming on 2–3 devices.</p>
-          <ul class="list">
-            <li>50 Mbps high-speed internet</li>
-            <li>Truly unlimited monthly data</li>
-            <li>Single-band Wi-Fi Router included</li>
-            <li>Sub-15ms local latency</li>
-            <li>Standard email &amp; phone support</li>
-          </ul>
-          <a class="btn secondary" href="signup.html?plan=essential-50">Select Plan &rarr;</a>
-        </article>
+    <!-- Plans Selection Section -->
+    <section class="section">
+      <div class="container">
 
-        <!-- Card 2: Family Plus Combo (Featured) -->
-        <article class="card plain-card featured plan-item" data-category="combo">
-          <span class="featured-ribbon">POPULAR CHOICE</span>
-          <span class="eyebrow">ALL-IN-ONE COMBO</span>
-          <div class="speed-tag" style="background:var(--primary-light);color:var(--primary)">100 Mbps + 180 Channels</div>
-          <h3>Family Plus Combo</h3>
-          <div class="price">₹799<small> / month*</small></div>
-          <p>The ultimate entertainment package for family households with diverse screen choices.</p>
-          <ul class="list">
-            <li>100 Mbps symmetrical FTTH fiber</li>
-            <li>180+ Digital Cable TV Channels (55 HD)</li>
-            <li>3 OTT apps: Disney+ Hotstar, SonyLIV, Zee5</li>
-            <li>Free Dual-band Wi-Fi 6 Gigabit Router</li>
-            <li>Free HD Set-Top Box on 6-month signup</li>
-          </ul>
-          <a class="btn" href="signup.html?plan=family-plus-100">Select Plan &rarr;</a>
-        </article>
+        <!-- Category Filter Tabs -->
+        <div class="filter-tabs">
+          <button class="filter-btn active" data-filter="all" onclick="filterPlans('all')">All Plans</button>
+          <button class="filter-btn" data-filter="broadband" onclick="filterPlans('broadband')">Fiber Broadband</button>
+          <button class="filter-btn" data-filter="combo" onclick="filterPlans('combo')">Broadband + TV Combos</button>
+          <button class="filter-btn" data-filter="tv" onclick="filterPlans('tv')">Cable TV Only</button>
+        </div>
 
-        <!-- Card 3: Ultra Entertainment -->
-        <article class="card plain-card plan-item" data-category="combo">
-          <span class="eyebrow">PREMIUM COMBO</span>
-          <div class="speed-tag">200 Mbps + 250 Channels</div>
-          <h3>Ultra Entertainment</h3>
-          <div class="price">₹1,299<small> / month*</small></div>
-          <p>Built for simultaneous 4K streams, cloud backups, multiplayer gaming, and high channel variety.</p>
-          <ul class="list">
-            <li>200 Mbps gigabit-grade bandwidth</li>
-            <li>250+ Cable TV channels (80 HD)</li>
-            <li>6 OTT apps included with 4K Android Box</li>
-            <li>Static IP add-on eligibility</li>
-            <li>Dedicated priority customer support</li>
-          </ul>
-          <a class="btn secondary" href="signup.html?plan=ultra-200">Select Plan &rarr;</a>
-        </article>
+        <!-- Plan Cards Grid -->
+        <div class="grid">
+          <!-- Card 1: Starter Fiber -->
+          <article class="card plain-card plan-item" data-category="broadband">
+            <span class="eyebrow">BROADBAND BASIC</span>
+            <div class="speed-tag">50 Mbps Symmetrical</div>
+            <h3>Essential Connect</h3>
+            <div class="price">₹499<small> / month*</small></div>
+            <p>For seamless everyday browsing, study, Zoom meetings, and streaming on 2–3 devices.</p>
+            <ul class="list">
+              <li>50 Mbps high-speed internet</li>
+              <li>Truly unlimited monthly data</li>
+              <li>Single-band Wi-Fi Router included</li>
+              <li>Sub-15ms local latency</li>
+              <li>Standard email &amp; phone support</li>
+            </ul>
+            <a class="btn secondary" href="signup.html?plan=essential-50">Select Plan &rarr;</a>
+          </article>
 
-        <!-- Card 4: Pure Gigabit Fiber -->
-        <article class="card plain-card plan-item" data-category="broadband">
-          <span class="eyebrow">EXTREME FIBER</span>
-          <div class="speed-tag">500 Mbps Pure Fiber</div>
-          <h3>GigaMax Pro</h3>
-          <div class="price">₹1,499<small> / month*</small></div>
-          <p>Engineered for streamers, content creators, gamers, and smart home server setups.</p>
-          <ul class="list">
-            <li>500 Mbps upload &amp; download speeds</li>
-            <li>Uncapped bandwidth with zero throttling</li>
-            <li>Enterprise Mesh Wi-Fi 6 Router free</li>
-            <li>Sub-5ms gaming routes to Asia &amp; Europe</li>
-            <li>24/7 dedicated account manager</li>
-          </ul>
-          <a class="btn secondary" href="signup.html?plan=gigamax-500">Select Plan &rarr;</a>
-        </article>
+          <!-- Card 2: Family Plus Combo (Featured) -->
+          <article class="card plain-card featured plan-item" data-category="combo">
+            <span class="featured-ribbon">POPULAR CHOICE</span>
+            <span class="eyebrow">ALL-IN-ONE COMBO</span>
+            <div class="speed-tag" style="background:var(--primary-light);color:var(--primary)">100 Mbps + 180 Channels
+            </div>
+            <h3>Family Plus Combo</h3>
+            <div class="price">₹799<small> / month*</small></div>
+            <p>The ultimate entertainment package for family households with diverse screen choices.</p>
+            <ul class="list">
+              <li>100 Mbps symmetrical FTTH fiber</li>
+              <li>180+ Digital Cable TV Channels (55 HD)</li>
+              <li>3 OTT apps: Disney+ Hotstar, SonyLIV, Zee5</li>
+              <li>Free Dual-band Wi-Fi 6 Gigabit Router</li>
+              <li>Free HD Set-Top Box on 6-month signup</li>
+            </ul>
+            <a class="btn" href="signup.html?plan=family-plus-100">Select Plan &rarr;</a>
+          </article>
 
-        <!-- Card 5: Cable TV Silver -->
-        <article class="card plain-card plan-item" data-category="tv">
-          <span class="eyebrow">CABLE TV STANDALONE</span>
-          <div class="speed-tag">150+ Digital Channels</div>
-          <h3>Digital Silver Pack</h3>
-          <div class="price">₹299<small> / month*</small></div>
-          <p>Crystal clear digital cable transmission with all basic news, music, movies, and infotainment.</p>
-          <ul class="list">
-            <li>150+ Digital Channels (35 Full HD)</li>
-            <li>Interactive 7-day electronic TV guide</li>
-            <li>Free installation with standard set-top box</li>
-            <li>Multi-audio language feed support</li>
-            <li>Parental lock &amp; channel favorites</li>
-          </ul>
-          <a class="btn secondary" href="signup.html?plan=digital-silver">Select Plan &rarr;</a>
-        </article>
+          <!-- Card 3: Ultra Entertainment -->
+          <article class="card plain-card plan-item" data-category="combo">
+            <span class="eyebrow">PREMIUM COMBO</span>
+            <div class="speed-tag">200 Mbps + 250 Channels</div>
+            <h3>Ultra Entertainment</h3>
+            <div class="price">₹1,299<small> / month*</small></div>
+            <p>Built for simultaneous 4K streams, cloud backups, multiplayer gaming, and high channel variety.</p>
+            <ul class="list">
+              <li>200 Mbps gigabit-grade bandwidth</li>
+              <li>250+ Cable TV channels (80 HD)</li>
+              <li>6 OTT apps included with 4K Android Box</li>
+              <li>Static IP add-on eligibility</li>
+              <li>Dedicated priority customer support</li>
+            </ul>
+            <a class="btn secondary" href="signup.html?plan=ultra-200">Select Plan &rarr;</a>
+          </article>
 
-        <!-- Card 6: Cable TV Gold 4K -->
-        <article class="card plain-card plan-item" data-category="tv">
-          <span class="eyebrow">CABLE TV PREMIUM</span>
-          <div class="speed-tag">280+ Channels &amp; 4K Sports</div>
-          <h3>Digital Gold 4K</h3>
-          <div class="price">₹449<small> / month*</small></div>
-          <p>The total television bundle: Live sports in 4K, international movies, lifestyle, and regional bouquets.</p>
-          <ul class="list">
-            <li>280+ Channels (90 HD + 2 4K Ultra channels)</li>
-            <li>Android TV Smart Box with voice remote</li>
-            <li>Live rewind &amp; recording up to 50 hours</li>
-            <li>All major sports &amp; cinema networks</li>
-            <li>Instant add-on channel activation</li>
-          </ul>
-          <a class="btn secondary" href="signup.html?plan=digital-gold">Select Plan &rarr;</a>
-        </article>
+          <!-- Card 4: Pure Gigabit Fiber -->
+          <article class="card plain-card plan-item" data-category="broadband">
+            <span class="eyebrow">EXTREME FIBER</span>
+            <div class="speed-tag">500 Mbps Pure Fiber</div>
+            <h3>GigaMax Pro</h3>
+            <div class="price">₹1,499<small> / month*</small></div>
+            <p>Engineered for streamers, content creators, gamers, and smart home server setups.</p>
+            <ul class="list">
+              <li>500 Mbps upload &amp; download speeds</li>
+              <li>Uncapped bandwidth with zero throttling</li>
+              <li>Enterprise Mesh Wi-Fi 6 Router free</li>
+              <li>Sub-5ms gaming routes to Asia &amp; Europe</li>
+              <li>24/7 dedicated account manager</li>
+            </ul>
+            <a class="btn secondary" href="signup.html?plan=gigamax-500">Select Plan &rarr;</a>
+          </article>
+
+          <!-- Card 5: Cable TV Silver -->
+          <article class="card plain-card plan-item" data-category="tv">
+            <span class="eyebrow">CABLE TV STANDALONE</span>
+            <div class="speed-tag">150+ Digital Channels</div>
+            <h3>Digital Silver Pack</h3>
+            <div class="price">₹299<small> / month*</small></div>
+            <p>Crystal clear digital cable transmission with all basic news, music, movies, and infotainment.</p>
+            <ul class="list">
+              <li>150+ Digital Channels (35 Full HD)</li>
+              <li>Interactive 7-day electronic TV guide</li>
+              <li>Free installation with standard set-top box</li>
+              <li>Multi-audio language feed support</li>
+              <li>Parental lock &amp; channel favorites</li>
+            </ul>
+            <a class="btn secondary" href="signup.html?plan=digital-silver">Select Plan &rarr;</a>
+          </article>
+
+          <!-- Card 6: Cable TV Gold 4K -->
+          <article class="card plain-card plan-item" data-category="tv">
+            <span class="eyebrow">CABLE TV PREMIUM</span>
+            <div class="speed-tag">280+ Channels &amp; 4K Sports</div>
+            <h3>Digital Gold 4K</h3>
+            <div class="price">₹449<small> / month*</small></div>
+            <p>The total television bundle: Live sports in 4K, international movies, lifestyle, and regional bouquets.
+            </p>
+            <ul class="list">
+              <li>280+ Channels (90 HD + 2 4K Ultra channels)</li>
+              <li>Android TV Smart Box with voice remote</li>
+              <li>Live rewind &amp; recording up to 50 hours</li>
+              <li>All major sports &amp; cinema networks</li>
+              <li>Instant add-on channel activation</li>
+            </ul>
+            <a class="btn secondary" href="signup.html?plan=digital-gold">Select Plan &rarr;</a>
+          </article>
+        </div>
+
+        <p style="text-align:center;font-size:13px;color:var(--muted);margin-top:28px">
+          *Prices are illustrative for demo purposes and exclude local taxes. Free installation applies on semi-annual
+          and annual subscriptions.
+        </p>
       </div>
+    </section>
 
-      <p style="text-align:center;font-size:13px;color:var(--muted);margin-top:28px">
-        *Prices are illustrative for demo purposes and exclude local taxes. Free installation applies on semi-annual and annual subscriptions.
-      </p>
-    </div>
-  </section>
+    <!-- Plan Comparison Matrix -->
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Side-by-Side</span>
+          <h2>Detailed Plan Feature Comparison</h2>
+          <p>Compare specifications across our most popular home tiers.</p>
+        </div>
 
-  <!-- Plan Comparison Matrix -->
-  <section class="section alt">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Side-by-Side</span>
-        <h2>Detailed Plan Feature Comparison</h2>
-        <p>Compare specifications across our most popular home tiers.</p>
-      </div>
-
-      <div class="table-wrap">
-        <table class="data-table">
-          <thead>
-            <tr>
-              <th>Feature</th>
-              <th>Essential 50</th>
-              <th>Family Plus 100</th>
-              <th>Ultra 200</th>
-              <th>GigaMax 500</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Monthly Price</strong></td>
-              <td>₹499 / mo</td>
-              <td><strong style="color:var(--primary)">₹799 / mo</strong></td>
-              <td>₹1,299 / mo</td>
-              <td>₹1,499 / mo</td>
-            </tr>
-            <tr>
-              <td><strong>Download / Upload Speed</strong></td>
-              <td>50 Mbps</td>
-              <td>100 Mbps Symmetrical</td>
-              <td>200 Mbps Symmetrical</td>
-              <td>500 Mbps Symmetrical</td>
-            </tr>
-            <tr>
-              <td><strong>Data Limit (FUP)</strong></td>
-              <td>Truly Unlimited</td>
-              <td>Truly Unlimited (3300 GB)</td>
-              <td>Truly Unlimited (3300 GB)</td>
-              <td>Commercial Uncapped</td>
-            </tr>
-            <tr>
-              <td><strong>Cable TV Channels</strong></td>
-              <td>Add-on available</td>
-              <td>180+ Channels (55 HD)</td>
-              <td>250+ Channels (80 HD)</td>
-              <td>Available as add-on</td>
-            </tr>
-            <tr>
-              <td><strong>OTT Subscriptions</strong></td>
-              <td>None</td>
-              <td>3 OTT Apps Included</td>
-              <td>6 OTT Apps + 4K Box</td>
-              <td>Complimentary OTT Pass</td>
-            </tr>
-            <tr>
-              <td><strong>Wi-Fi Hardware</strong></td>
-              <td>Standard Wi-Fi</td>
-              <td>Dual-band Wi-Fi 6</td>
-              <td>Dual-band Wi-Fi 6 Gigabit</td>
-              <td>Tri-Band Mesh System</td>
-            </tr>
-            <tr>
-              <td><strong>Support SLA</strong></td>
-              <td>24-hour turnaround</td>
-              <td>Same-day support</td>
-              <td>4-hour priority response</td>
-              <td>2-hour VIP dispatch</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- Plans FAQ -->
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Help &amp; Answers</span>
-        <h2>Questions about our plans?</h2>
-        <p>Everything you need to know before joining ConnectWave.</p>
-      </div>
-      <div class="faq">
-        <details open>
-          <summary>Is there an installation charge for new connections?</summary>
-          <p>Standard installation is completely FREE when you subscribe to any 6-month or 12-month billing plan. On monthly plans, a nominal one-time technician fee of ₹500 covers indoor optical cabling and router configuration.</p>
-        </details>
-        <details>
-          <summary>Can I upgrade or downgrade my plan later?</summary>
-          <p>Yes! Subscribers can change their plan at any time through the Subscriber Dashboard with pro-rata billing adjustments. Upgrades take effect within 15 minutes.</p>
-        </details>
-        <details>
-          <summary>What equipment is provided with the connection?</summary>
-          <p>We provide a state-of-the-art Optical Network Terminal (ONT) Wi-Fi 6 router. For combo plans, a 4K hybrid cable set-top box is also provided on a security deposit basis.</p>
-        </details>
-        <details>
-          <summary>Are upload and download speeds symmetrical?</summary>
-          <p>Yes, all ConnectWave pure fiber broadband connections deliver equal upload and download speeds, making high-resolution video calls, online backups, and gaming lag-free.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-</main>
-
-<!-- Footer (Identical Brand Name with Navbar) -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand-wrap">
-        <a class="brand" href="index.html">
-          <span class="logo">C</span>
-          <span>Connect<span style="color:var(--accent)">Wave</span></span>
-        </a>
-        <p>Bringing high-speed gigabit fiber broadband and digital 4K cable TV together for homes and businesses.</p>
-        <div class="footer-social">
-          <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
-          </a>
-          <a href="https://x.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="X (Twitter)">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-          </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.65 1.65 0 1 0 0-3.3 1.65 1.65 0 0 0 0 3.3m1.4 9.74v-8.37H5.06v8.37z"/></svg>
-          </a>
-          <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="YouTube">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-          </a>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Essential 50</th>
+                <th>Family Plus 100</th>
+                <th>Ultra 200</th>
+                <th>GigaMax 500</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Monthly Price</strong></td>
+                <td>₹499 / mo</td>
+                <td><strong style="color:var(--primary)">₹799 / mo</strong></td>
+                <td>₹1,299 / mo</td>
+                <td>₹1,499 / mo</td>
+              </tr>
+              <tr>
+                <td><strong>Download / Upload Speed</strong></td>
+                <td>50 Mbps</td>
+                <td>100 Mbps Symmetrical</td>
+                <td>200 Mbps Symmetrical</td>
+                <td>500 Mbps Symmetrical</td>
+              </tr>
+              <tr>
+                <td><strong>Data Limit (FUP)</strong></td>
+                <td>Truly Unlimited</td>
+                <td>Truly Unlimited (3300 GB)</td>
+                <td>Truly Unlimited (3300 GB)</td>
+                <td>Commercial Uncapped</td>
+              </tr>
+              <tr>
+                <td><strong>Cable TV Channels</strong></td>
+                <td>Add-on available</td>
+                <td>180+ Channels (55 HD)</td>
+                <td>250+ Channels (80 HD)</td>
+                <td>Available as add-on</td>
+              </tr>
+              <tr>
+                <td><strong>OTT Subscriptions</strong></td>
+                <td>None</td>
+                <td>3 OTT Apps Included</td>
+                <td>6 OTT Apps + 4K Box</td>
+                <td>Complimentary OTT Pass</td>
+              </tr>
+              <tr>
+                <td><strong>Wi-Fi Hardware</strong></td>
+                <td>Standard Wi-Fi</td>
+                <td>Dual-band Wi-Fi 6</td>
+                <td>Dual-band Wi-Fi 6 Gigabit</td>
+                <td>Tri-Band Mesh System</td>
+              </tr>
+              <tr>
+                <td><strong>Support SLA</strong></td>
+                <td>24-hour turnaround</td>
+                <td>Same-day support</td>
+                <td>4-hour priority response</td>
+                <td>2-hour VIP dispatch</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-      <div>
-        <h4>Explore Plans</h4>
-        <a href="plans.html">Broadband plans</a>
-        <a href="services.html">TV packages</a>
-        <a href="coverage.html">Coverage map</a>
-        <a href="about.html">About us</a>
+    </section>
+
+    <!-- Plans FAQ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Help &amp; Answers</span>
+          <h2>Questions about our plans?</h2>
+          <p>Everything you need to know before joining ConnectWave.</p>
+        </div>
+        <div class="faq">
+          <details open>
+            <summary>Is there an installation charge for new connections?</summary>
+            <p>Standard installation is completely FREE when you subscribe to any 6-month or 12-month billing plan. On
+              monthly plans, a nominal one-time technician fee of ₹500 covers indoor optical cabling and router
+              configuration.</p>
+          </details>
+          <details>
+            <summary>Can I upgrade or downgrade my plan later?</summary>
+            <p>Yes! Subscribers can change their plan at any time through the Subscriber Dashboard with pro-rata billing
+              adjustments. Upgrades take effect within 15 minutes.</p>
+          </details>
+          <details>
+            <summary>What equipment is provided with the connection?</summary>
+            <p>We provide a state-of-the-art Optical Network Terminal (ONT) Wi-Fi 6 router. For combo plans, a 4K hybrid
+              cable set-top box is also provided on a security deposit basis.</p>
+          </details>
+          <details>
+            <summary>Are upload and download speeds symmetrical?</summary>
+            <p>Yes, all ConnectWave pure fiber broadband connections deliver equal upload and download speeds, making
+              high-resolution video calls, online backups, and gaming lag-free.</p>
+          </details>
+        </div>
       </div>
-      <div>
-        <h4>Customer Care</h4>
-        <a href="dashboard.html">Subscriber dashboard</a>
-        <a href="support.html">Help centre</a>
-        <a href="contact.html#support">FAQs &amp; Support</a>
-        <a href="contact.html">Contact us</a>
+    </section>
+  </main>
+
+  <!-- Footer (Identical Brand Name with Navbar) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-wrap">
+          <a class="brand" href="index.html">
+            <span class="logo">C</span>
+            <span>Connect<span style="color:var(--accent)">Wave</span></span>
+          </a>
+          <p>Bringing high-speed gigabit fiber broadband and digital 4K cable TV together for homes and businesses.</p>
+          <div class="footer-social">
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link"
+              aria-label="Facebook">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z" />
+              </svg>
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="X (Twitter)">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-link"
+              aria-label="Instagram">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-link"
+              aria-label="LinkedIn">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.65 1.65 0 1 0 0-3.3 1.65 1.65 0 0 0 0 3.3m1.4 9.74v-8.37H5.06v8.37z" />
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-link"
+              aria-label="YouTube">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4>Explore Plans</h4>
+          <a href="plans.html">Broadband plans</a>
+          <a href="services.html">TV packages</a>
+          <a href="coverage.html">Coverage map</a>
+          <a href="about.html">About us</a>
+        </div>
+        <div>
+          <h4>Customer Care</h4>
+          <a href="dashboard.html">Subscriber dashboard</a>
+          <a href="support.html">Help centre</a>
+          <a href="contact.html#support">FAQs &amp; Support</a>
+          <a href="contact.html">Contact us</a>
+        </div>
+        <div>
+          <h4>Subscriber Services</h4>
+          <a href="dashboard.html">Pay bill online</a>
+          <a href="dashboard.html">Raise complaint</a>
+          <a href="login.html">Subscriber login</a>
+          <a href="signup.html">Create account</a>
+        </div>
       </div>
-      <div>
-        <h4>Subscriber Services</h4>
-        <a href="dashboard.html">Pay bill online</a>
-        <a href="dashboard.html">Raise complaint</a>
-        <a href="login.html">Subscriber login</a>
-        <a href="signup.html">Create account</a>
+      <div class="copyright">
+        <span>&copy; 2026 ConnectWave Communications. All rights reserved.</span>
+        <span>24/7 Helpline: 1800-555-0199</span>
       </div>
     </div>
-    <div class="copyright">
-      <span>&copy; 2026 ConnectWave Communications. All rights reserved.</span>
-      <span>24/7 Helpline: 1800-555-0199</span>
-    </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- Back to Top Button -->
-<button class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="Back to top">↑</button>
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="Back to top">↑</button>
 
-<script src="assets/app.js"></script>
+  <script src="assets/app.js"></script>
 </body>
+
 </html>
