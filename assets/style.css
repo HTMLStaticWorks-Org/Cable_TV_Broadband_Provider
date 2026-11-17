@@ -1907,6 +1907,7 @@ button.card div {
     color: var(--text);
     transition: all 0.15s ease;
     text-decoration: none;
+    order: 1;
   }
 
   .navlinks > a:hover,
@@ -1923,16 +1924,18 @@ button.card div {
     text-align: right;
   }
 
-  /* Hamburger Menu Actions (RTL, Theme & Sign In/Up Buttons) */
+  /* Hamburger Menu Actions (RTL, Theme & Sign In/Up Buttons: Below all menu options at last) */
   .nav-menu-actions {
     display: flex !important;
     flex-direction: column;
     gap: 12px;
-    margin-top: 10px;
+    margin-top: 14px;
     padding-top: 16px;
+    padding-bottom: 6px;
     border-top: 1px solid var(--line);
     width: 100%;
     box-sizing: border-box;
+    order: 999 !important;
   }
 
   .nav-menu-tools {

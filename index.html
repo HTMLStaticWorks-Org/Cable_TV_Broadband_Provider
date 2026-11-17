@@ -1,568 +1,657 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="ConnectWave high-speed optical fiber broadband and digital 4K cable TV provider. 99.9% uptime, transparent plans, and 24/7 care.">
+  <meta name="description"
+    content="ConnectWave high-speed optical fiber broadband and digital 4K cable TV provider. 99.9% uptime, transparent plans, and 24/7 care.">
   <title>ConnectWave | Cable TV &amp; Gigabit Fiber Broadband</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/style.css">
 </head>
+
 <body>
 
-<!-- Announcement Offer Ticker -->
-<div class="offer-ticker">
-  <div class="container">
-    <span>⚡ <strong>Special Offer:</strong> Get Free Wi-Fi 6 Router + 3 Months OTT Subscription on all 100M+ plans! Code: <strong>WAVE2026</strong></span>
-  </div>
-</div>
-
-<!-- Topbar -->
-<div class="topbar">
-  <div class="container">
-    <div class="topbar-left">
-      <span>☎ <strong>1800-555-0199</strong> (Toll-Free)</span>
-      <span>|</span>
-      <span>24/7 Customer Care &amp; Support</span>
-    </div>
-    <div class="topbar-right">
-      <span class="badge badge-success" style="padding:2px 8px;font-size:11px">● Network 99.98% Operational</span>
-      <span>|</span>
-      <span>Reliable connections. Better experiences.</span>
+  <!-- Announcement Offer Ticker -->
+  <div class="offer-ticker">
+    <div class="container">
+      <span>⚡ <strong>Special Offer:</strong> Get Free Wi-Fi 6 Router + 3 Months OTT Subscription on all 100M+ plans!
+        Code: <strong>WAVE2026</strong></span>
     </div>
   </div>
-</div>
 
-<!-- Navbar -->
-<header class="navbar">
-  <div class="container navinner">
-    <a class="brand" href="index.html">
-      <span class="logo">C</span>
-      <span>Connect<span style="color:var(--accent)">Wave</span></span>
-    </a>
-    <nav class="navlinks" id="navlinks">
-      <a class="active" href="index.html">Home1</a>
-      <a href="Home2.html">Home2</a>
-      <a href="about.html">About</a>
-      <a href="plans.html">Plans</a>
-      <a href="coverage.html">Coverage</a>
-      <a href="services.html">Services</a>
-      <a href="dashboard.html">Dashboard</a>
-      <a href="contact.html">Contact</a>
-
-      <!-- Mobile & Tab Actions Inside Hamburger (RTL, Theme & Sign In/Up Buttons) -->
-      <div class="nav-menu-actions">
-        <div class="nav-menu-tools">
-          <button type="button" class="iconbtn" onclick="toggleRTL()" aria-label="Toggle text direction">
-            <span>🌐</span> <span>RTL</span>
-          </button>
-          <button type="button" class="iconbtn" onclick="toggleTheme()" aria-label="Toggle theme">
-            <span>◐</span> <span>Theme</span>
-          </button>
-        </div>
-        <div class="nav-menu-auth">
-          <a href="login.html" class="btn secondary small">Sign In</a>
-          <a href="signup.html" class="btn small nav-signup-btn">Sign Up</a>
-        </div>
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <span>☎ <strong>1800-555-0199</strong> (Toll-Free)</span>
+        <span>|</span>
+        <span>24/7 Customer Care &amp; Support</span>
       </div>
-    </nav>
-    <div class="navactions">
-      <button class="iconbtn nav-desktop-item" onclick="toggleRTL()" aria-label="Toggle text direction">RTL</button>
-      <button class="iconbtn nav-desktop-item" onclick="toggleTheme()" aria-label="Toggle theme">◐</button>
-      <a href="login.html" class="btn secondary small nav-desktop-item">Sign In</a>
-      <a href="signup.html" class="btn small nav-signup-btn nav-desktop-item">Sign Up</a>
-      <button class="hamburger-btn" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+      <div class="topbar-right">
+        <span class="badge badge-success" style="padding:2px 8px;font-size:11px">● Network 99.98% Operational</span>
+        <span>|</span>
+        <span>Reliable connections. Better experiences.</span>
+      </div>
     </div>
   </div>
-</header>
 
-<main>
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <span class="eyebrow">✦ Next-Gen Fiber &amp; Digital Cable TV</span>
-        <h1>Blazing Internet. Endless TV. <span class="gradient-text">Zero Buffering.</span></h1>
-        <p>
-          Experience lightning-fast gigabit optical fiber broadband paired with crystal-clear 4K digital cable television. Stream 4K blockbusters, game with ultra-low ping, and keep all your household smart devices online 24/7.
-        </p>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container navinner">
+      <a class="brand" href="index.html">
+        <span class="logo">C</span>
+        <span>Connect<span style="color:var(--accent)">Wave</span></span>
+      </a>
+      <nav class="navlinks" id="navlinks">
+        <a class="active" href="index.html">Home1</a>
+        <a href="Home2.html">Home2</a>
+        <a href="about.html">About</a>
+        <a href="plans.html">Plans</a>
+        <a href="coverage.html">Coverage</a>
+        <a href="services.html">Services</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="contact.html">Contact</a>
 
-        <!-- Quick Pincode Availability in Hero -->
-        <div class="hero-pincode-wrap" style="background:var(--surface);border:1.5px solid var(--line);border-radius:14px;padding:8px 8px 8px 16px;box-shadow:var(--shadow-sm);display:flex;gap:10px;align-items:center;max-width:480px;margin:20px 0 24px">
-          <span style="font-size:18px">📍</span>
-          <input type="text" id="heroPinInput" placeholder="Enter PIN code to check coverage..." style="border:0;background:transparent;outline:none;font:inherit;flex:1;color:var(--text);font-size:14px">
-          <button class="btn small" onclick="location.href='coverage.html?pin=' + encodeURIComponent(document.getElementById('heroPinInput').value)">Check Now &rarr;</button>
-        </div>
-
-        <div class="actions" style="display:flex;gap:12px;flex-wrap:wrap">
-          <a class="btn" href="#featured-plans">View Featured Plans &rarr;</a>
-          <a class="btn secondary" href="coverage.html">Explore Coverage Area</a>
-        </div>
-
-        <!-- High-Impact Live Stats -->
-        <div class="stats">
-          <div class="stat">
-            <strong>99.98%</strong>
-            <span>Fiber network uptime</span>
+        <!-- Mobile & Tab Actions Inside Hamburger (RTL, Theme & Sign In/Up Buttons) -->
+        <div class="nav-menu-actions">
+          <div class="nav-menu-tools">
+            <button type="button" class="iconbtn" onclick="toggleRTL()" aria-label="Toggle text direction">
+              <span>🌐</span> <span>RTL</span>
+            </button>
+            <button type="button" class="iconbtn" onclick="toggleTheme()" aria-label="Toggle theme">
+              <span>◐</span> <span>Theme</span>
+            </button>
           </div>
-          <div class="stat">
-            <strong>1 Gbps</strong>
-            <span>Max symmetrical speed</span>
-          </div>
-          <div class="stat">
-            <strong>350+</strong>
-            <span>HD &amp; 4K TV channels</span>
-          </div>
-          <div class="stat">
-            <strong>150k+</strong>
-            <span>Connected households</span>
+          <div class="nav-menu-auth">
+            <a href="login.html" class="btn secondary small">Sign In</a>
+            <a href="signup.html" class="btn small nav-signup-btn">Sign Up</a>
           </div>
         </div>
-      </div>
-
-      <!-- Hero Visual Image with Floating Badges -->
-      <div class="hero-img-wrap">
-        <img class="hero-img" src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=1400&q=85" alt="Modern home entertainment setup with 4K television and high-speed fiber broadband router">
-        
-        <div class="hero-float-card top-right">
-          <div style="width:36px;height:36px;border-radius:10px;background:var(--accent-light);color:var(--accent);display:grid;place-items:center;font-size:18px">⚡</div>
-          <div>
-            <div style="font-size:11px;color:var(--muted)">Fiber Speed Test</div>
-            <strong style="color:var(--text)">980 Mbps Symmetrical</strong>
-          </div>
-        </div>
-
-        <div class="hero-float-card bottom-left">
-          <div style="width:36px;height:36px;border-radius:10px;background:var(--primary-light);color:var(--primary);display:grid;place-items:center;font-size:18px">📺</div>
-          <div>
-            <div style="font-size:11px;color:var(--muted)">Digital Cable Quality</div>
-            <strong style="color:var(--text)">4K Ultra HD &bull; Dolby 5.1</strong>
-          </div>
-        </div>
+      </nav>
+      <div class="navactions">
+        <button class="iconbtn nav-desktop-item" onclick="toggleRTL()" aria-label="Toggle text direction">RTL</button>
+        <button class="iconbtn nav-desktop-item" onclick="toggleTheme()" aria-label="Toggle theme">◐</button>
+        <a href="login.html" class="btn secondary small nav-desktop-item">Sign In</a>
+        <a href="signup.html" class="btn small nav-signup-btn nav-desktop-item">Sign Up</a>
+        <button class="hamburger-btn" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu"
+          aria-expanded="false">☰</button>
       </div>
     </div>
-  </section>
+  </header>
 
-  <!-- Service Categories Grid -->
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Comprehensive Services</span>
-        <h2>Everything your modern connected home demands</h2>
-        <p>Engineered for high performance, consistent speeds, and uncompromised entertainment clarity.</p>
-      </div>
-
-      <div class="grid-4">
-        <!-- Service 1 -->
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1000&q=85" alt="High speed pure optical fiber broadband">
-          <div class="card-body">
-            <span class="badge badge-primary" style="margin-bottom:8px">100% FTTH</span>
-            <h3>Gigabit Fiber</h3>
-            <p>Direct underground optical fiber cables right to your living room. Symmetrical upload and download speeds up to 1 Gbps.</p>
-          </div>
-        </article>
-
-        <!-- Service 2 -->
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=1000&q=85" alt="4K Digital Cable Television with set-top box">
-          <div class="card-body">
-            <span class="badge badge-success" style="margin-bottom:8px">350+ Channels</span>
-            <h3>Digital 4K Cable TV</h3>
-            <p>Access live sports in 4K 60fps, blockbuster cinemas, multilingual regional feeds, and 50 hours of cloud recording.</p>
-          </div>
-        </article>
-
-        <!-- Service 3 -->
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1606904825846-647eb07f5be2?auto=format&fit=crop&w=1000&q=85" alt="Wi-Fi 6 router and whole home wireless coverage">
-          <div class="card-body">
-            <span class="badge badge-primary" style="margin-bottom:8px">Zero Dead Zones</span>
-            <h3>Smart Wi-Fi 6 Mesh</h3>
-            <p>Dual-band Wi-Fi 6 technology capable of connecting 60+ devices simultaneously without speed degradation.</p>
-          </div>
-        </article>
-
-        <!-- Service 4 -->
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=85" alt="Enterprise corporate leased lines and business broadband">
-          <div class="card-body">
-            <span class="badge badge-warning" style="margin-bottom:8px">Dedicated SLA</span>
-            <h3>Business Fiber</h3>
-            <p>Static IP allocations, 99.95% uptime service level agreement, and dedicated commercial priority support.</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Featured Plans Section on Home Page -->
-  <section class="section alt" id="featured-plans">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Value-Packed Subscriptions</span>
-        <h2>Popular plans for every household</h2>
-        <p>No hidden rental charges, transparent monthly pricing, and free equipment included.</p>
-
-        <!-- Monthly / Annual Toggle Switcher -->
-        <div class="plan-switcher">
-          <button class="plan-switch-btn active" data-cycle="monthly" onclick="setBillingCycle('monthly')">Monthly Billing</button>
-          <button class="plan-switch-btn" data-cycle="annual" onclick="setBillingCycle('annual')">Annual Plan (Save 15% 🎁)</button>
-        </div>
-      </div>
-
-      <div class="grid">
-        <!-- Plan 1 -->
-        <article class="card plain-card" data-monthly-price="499">
-          <span class="eyebrow">ESSENTIAL BROADBAND</span>
-          <div class="speed-tag">50 Mbps Symmetrical</div>
-          <h3>Essential Connect</h3>
-          <div class="price">₹499<small> / month*</small></div>
-          <p>Great for students, light streaming, video conferences, and everyday browsing on multiple mobile phones.</p>
-          
-          <div class="ott-badges">
-            <span class="ott-chip">Unlimited Data</span>
-            <span class="ott-chip">Free Wi-Fi Router</span>
-          </div>
-
-          <ul class="list">
-            <li>50 Mbps symmetrical upload &amp; download</li>
-            <li>Truly unlimited high-speed data</li>
-            <li>Single-band optical ONT router free</li>
-            <li>Sub-15ms local gaming ping</li>
-            <li>Cable TV add-on available at ₹150/mo</li>
-          </ul>
-          <a class="btn secondary" href="signup.html?plan=essential50">Choose Plan &rarr;</a>
-        </article>
-
-        <!-- Plan 2: Most Popular Combo -->
-        <article class="card plain-card featured" data-monthly-price="799">
-          <span class="featured-ribbon">MOST POPULAR</span>
-          <span class="eyebrow">ALL-IN-ONE COMBO</span>
-          <div class="speed-tag" style="background:var(--primary-light);color:var(--primary)">100 Mbps + 180 Channels</div>
-          <h3>Family Plus Combo</h3>
-          <div class="price">₹799<small> / month*</small></div>
-          <p>Our top household recommendation: high-speed fiber internet and a full package of HD cable entertainment.</p>
-          
-          <div class="ott-badges">
-            <span class="ott-chip">Disney+ Hotstar</span>
-            <span class="ott-chip">SonyLIV</span>
-            <span class="ott-chip">Zee5</span>
-          </div>
-
-          <ul class="list">
-            <li>100 Mbps pure optical FTTH fiber</li>
-            <li>180+ Digital Cable TV channels (55 HD)</li>
-            <li>3 Premium OTT streaming subscriptions</li>
-            <li>Dual-band Wi-Fi 6 Gigabit Router included</li>
-            <li>Zero installation fee on annual subscriptions</li>
-          </ul>
-          <a class="btn" href="signup.html?plan=familyplus100">Get Family Plus &rarr;</a>
-        </article>
-
-        <!-- Plan 3 -->
-        <article class="card plain-card" data-monthly-price="1299">
-          <span class="eyebrow">TURBO ENTERTAINMENT</span>
-          <div class="speed-tag">200 Mbps + 250 Channels</div>
-          <h3>Ultra Entertainment</h3>
-          <div class="price">₹1,299<small> / month*</small></div>
-          <p>Designed for competitive gaming, multi-screen 4K streaming, home offices, and sports enthusiasts.</p>
-          
-          <div class="ott-badges">
-            <span class="ott-chip">6 OTT Apps</span>
-            <span class="ott-chip">4K Android Box</span>
-            <span class="ott-chip">All Sports 4K</span>
-          </div>
-
-          <ul class="list">
-            <li>200 Mbps gigabit-grade symmetrical speeds</li>
-            <li>250+ Digital Cable TV channels (80 HD)</li>
-            <li>Android 4K Smart Box with Google Voice remote</li>
-            <li>6 OTT apps including Disney+, SonyLIV, Zee5</li>
-            <li>Sub-8ms latency &amp; VIP priority technician response</li>
-          </ul>
-          <a class="btn secondary" href="signup.html?plan=ultra200">Choose Plan &rarr;</a>
-        </article>
-      </div>
-
-      <div style="text-align:center;margin-top:36px">
-        <a class="btn secondary" href="plans.html">Compare All Fiber &amp; TV Plans &rarr;</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Interactive Coverage Quick Strip -->
-  <section class="section">
-    <div class="container">
-      <div class="banner">
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-grid">
         <div>
-          <h2>Check fiber availability in your locality</h2>
-          <p>Our underground FTTH ring is expanding across major urban sectors and townships. Verify your address today.</p>
-        </div>
-        <div class="banner-actions" style="display:flex;gap:12px;flex-wrap:wrap">
-          <a class="btn" style="background:#ffffff;color:#0f172a !important" href="coverage.html">Check Coverage Map &rarr;</a>
-          <a class="btn secondary" style="border-color:rgba(255,255,255,0.3);color:#ffffff !important;background:transparent" href="coverage.html#request-coverage">Request My Colony</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Choose ConnectWave: 6 Value Pillars -->
-  <section class="section alt">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">The ConnectWave Advantage</span>
-        <h2>Why thousands trust ConnectWave every day</h2>
-        <p>Built with enterprise infrastructure to deliver reliable home entertainment and internet.</p>
-      </div>
-
-      <div class="grid">
-        <div class="card" style="padding:28px">
-          <div class="feature-icon">⚡</div>
-          <h3>100% Symmetrical Speeds</h3>
-          <p>Unlike copper or coaxial-only connections, our optical fiber delivers matching upload and download speeds so video conferences and gaming never stutter.</p>
-        </div>
-
-        <div class="card" style="padding:28px">
-          <div class="feature-icon">🛡️</div>
-          <h3>Underground Optical Ring</h3>
-          <p>Our pure underground fiber rings are shielded from heavy rain, winds, and accidental street wire cuts, ensuring a reliable 99.98% uptime SLA.</p>
-        </div>
-
-        <div class="card" style="padding:28px">
-          <div class="feature-icon">📺</div>
-          <h3>Hybrid 4K Smart Cable Box</h3>
-          <p>Switch seamlessly between broadcast cable television and your favourite streaming apps on one smart box with a single voice remote control.</p>
-        </div>
-
-        <div class="card" style="padding:28px">
-          <div class="feature-icon">⏱️</div>
-          <h3>4-Hour Rapid Field Response</h3>
-          <p>Local technician hubs located in every active postal zone. When you raise a service request, a technician is assigned to your door within 4 hours.</p>
-        </div>
-
-        <div class="card" style="padding:28px">
-          <div class="feature-icon">💳</div>
-          <h3>Transparent Billing</h3>
-          <p>No hidden modem security fees, no surprise rental hikes, and zero cancellation penalties. What you see is what you pay.</p>
-        </div>
-
-        <div class="card" style="padding:28px">
-          <div class="feature-icon">📱</div>
-          <h3>Self-Care Subscriber Portal</h3>
-          <p>Pay your bills via UPI with instant downloadable receipts, track high-speed data usage, and raise service complaints 24/7 without waiting on hold.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Entertainment Showcase (Cable TV & OTT Bouquets) -->
-  <section class="section">
-    <div class="container two-col">
-      <img src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?auto=format&fit=crop&w=1200&q=85" alt="Family enjoying streaming movies and cable television sports in living room">
-      <div>
-        <span class="eyebrow">Entertainment for Everyone</span>
-        <h2>Over 350 channels and all top streaming apps in one place.</h2>
-        <p class="lead">
-          Never fight over the remote again. ConnectWave bundles high-definition cable channels with premium digital streaming.
-        </p>
-        <ul class="list">
-          <li><strong>Live Sports in 4K:</strong> Star Sports, Sony Sports, and Ten HD broadcasting cricket, football, tennis, and F1.</li>
-          <li><strong>Cinema &amp; Series:</strong> Dedicated movie bouquets in English, Hindi, Tamil, Telugu, and regional languages.</li>
-          <li><strong>Kids &amp; Learning:</strong> Disney Channel, Cartoon Network, Discovery Science, and National Geographic.</li>
-          <li><strong>Cloud DVR &amp; Catch-Up:</strong> Pause live TV or catch up on episodes broadcast within the past 7 days.</li>
-        </ul>
-        <div style="display:flex;gap:12px;margin-top:20px;flex-wrap:wrap">
-          <a class="btn" href="plans.html?cat=tv">Browse TV Packages &rarr;</a>
-          <a class="btn secondary" href="services.html">Explore Services</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Dedicated Subscriber Portal Spotlight Card -->
-  <section class="section alt">
-    <div class="container two-col">
-      <div>
-        <span class="eyebrow">Subscriber Dashboard Portal</span>
-        <h2>Total control over your connection, anytime.</h2>
-        <p class="lead">
-          ConnectWave subscribers can manage their account with our feature-rich self-care dashboard.
-        </p>
-        <ul class="list">
-          <li><strong>1-Click Bill Payments:</strong> Instant receipts via UPI, GPay, Credit/Debit cards, and NetBanking.</li>
-          <li><strong>Live Data Consumption:</strong> Real-time tracking of high-speed bandwidth with renewal countdown.</li>
-          <li><strong>Raise &amp; Track Complaints:</strong> Live engineer dispatch tracking from logging to resolution.</li>
-          <li><strong>Instant Speed Upgrades:</strong> Boost bandwidth or add sports channels in seconds.</li>
-        </ul>
-        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:22px">
-          <a class="btn" href="dashboard.html">Launch Subscriber Dashboard &rarr;</a>
-          <a class="btn secondary" href="login.html">Login to Portal</a>
-        </div>
-      </div>
-      <img src="https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=1200&q=85" alt="Modern connected smart home with broadband connectivity">
-    </div>
-  </section>
-
-  <!-- Customer Testimonials -->
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Subscriber Reviews</span>
-        <h2>Loved by 150,000+ homes and businesses</h2>
-        <p>Real stories from verified ConnectWave subscribers across the city.</p>
-      </div>
-
-      <div class="grid">
-        <div class="card" style="padding:28px">
-          <div style="color:#f59e0b;font-size:18px;margin-bottom:10px">★★★★★</div>
-          <p style="font-style:italic;color:var(--text);margin-bottom:16px">
-            "Switching to ConnectWave Family Plus was the best decision for our household. The 100 Mbps fiber speed is rock solid even when my husband and I both work remotely while our children stream 4K cartoons."
+          <span class="eyebrow">✦ Next-Gen Fiber &amp; Digital Cable TV</span>
+          <h1>Blazing Internet. Endless TV. <span class="gradient-text">Zero Buffering.</span></h1>
+          <p>
+            Experience lightning-fast gigabit optical fiber broadband paired with crystal-clear 4K digital cable
+            television. Stream 4K blockbusters, game with ultra-low ping, and keep all your household smart devices
+            online 24/7.
           </p>
-          <div style="display:flex;align-items:center;gap:12px">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&h=120&q=80" alt="Rohit &amp; Kavita Sharma" style="width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--primary);flex-shrink:0">
-            <div>
-              <strong style="color:var(--text)">Rohit &amp; Kavita Sharma</strong>
-              <div style="font-size:12px;color:var(--muted)">Subscriber since 2024 &bull; Sector 14</div>
+
+          <!-- Quick Pincode Availability in Hero -->
+          <div class="hero-pincode-wrap"
+            style="background:var(--surface);border:1.5px solid var(--line);border-radius:14px;padding:8px 8px 8px 16px;box-shadow:var(--shadow-sm);display:flex;gap:10px;align-items:center;max-width:480px;margin:20px 0 24px">
+            <span style="font-size:18px">📍</span>
+            <input type="text" id="heroPinInput" placeholder="Enter PIN code to check coverage..."
+              style="border:0;background:transparent;outline:none;font:inherit;flex:1;color:var(--text);font-size:14px">
+            <button class="btn small"
+              onclick="location.href='coverage.html?pin=' + encodeURIComponent(document.getElementById('heroPinInput').value)">Check
+              Now &rarr;</button>
+          </div>
+
+          <div class="actions" style="display:flex;gap:12px;flex-wrap:wrap">
+            <a class="btn" href="#featured-plans">View Featured Plans &rarr;</a>
+            <a class="btn secondary" href="coverage.html">Explore Coverage Area</a>
+          </div>
+
+          <!-- High-Impact Live Stats -->
+          <div class="stats">
+            <div class="stat">
+              <strong>99.98%</strong>
+              <span>Fiber network uptime</span>
+            </div>
+            <div class="stat">
+              <strong>1 Gbps</strong>
+              <span>Max symmetrical speed</span>
+            </div>
+            <div class="stat">
+              <strong>350+</strong>
+              <span>HD &amp; 4K TV channels</span>
+            </div>
+            <div class="stat">
+              <strong>150k+</strong>
+              <span>Connected households</span>
             </div>
           </div>
         </div>
 
-        <div class="card" style="padding:28px">
-          <div style="color:#f59e0b;font-size:18px;margin-bottom:10px">★★★★★</div>
-          <p style="font-style:italic;color:var(--text);margin-bottom:16px">
-            "The 4-hour technician turnaround is 100% real. When our internal cable got pinched during painting, I raised a ticket on the dashboard and an engineer was at my apartment in 2 hours. Superb service!"
-          </p>
-          <div style="display:flex;align-items:center;gap:12px">
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&h=120&q=80" alt="Ananya Mukherjee" style="width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--accent);flex-shrink:0">
+        <!-- Hero Visual Image with Floating Badges -->
+        <div class="hero-img-wrap">
+          <img class="hero-img"
+            src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=1400&q=85"
+            alt="Modern home entertainment setup with 4K television and high-speed fiber broadband router">
+
+          <div class="hero-float-card top-right">
+            <div
+              style="width:36px;height:36px;border-radius:10px;background:var(--accent-light);color:var(--accent);display:grid;place-items:center;font-size:18px">
+              ⚡</div>
             <div>
-              <strong style="color:var(--text)">Ananya Mukherjee</strong>
-              <div style="font-size:12px;color:var(--muted)">Subscriber since 2023 &bull; IT Tech Corridor</div>
+              <div style="font-size:11px;color:var(--muted)">Fiber Speed Test</div>
+              <strong style="color:var(--text)">980 Mbps Symmetrical</strong>
+            </div>
+          </div>
+
+          <div class="hero-float-card bottom-left">
+            <div
+              style="width:36px;height:36px;border-radius:10px;background:var(--primary-light);color:var(--primary);display:grid;place-items:center;font-size:18px">
+              📺</div>
+            <div>
+              <div style="font-size:11px;color:var(--muted)">Digital Cable Quality</div>
+              <strong style="color:var(--text)">4K Ultra HD &bull; Dolby 5.1</strong>
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="card" style="padding:28px">
-          <div style="color:#f59e0b;font-size:18px;margin-bottom:10px">★★★★★</div>
-          <p style="font-style:italic;color:var(--text);margin-bottom:16px">
-            "As an online streamer and competitive gamer, latency is everything. ConnectWave gives me 7ms ping on local servers and equal 200 Mbps upload speed. Zero packet loss, ever."
-          </p>
-          <div style="display:flex;align-items:center;gap:12px">
-            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&h=120&q=80" alt="Deepak Verma" style="width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--warning);flex-shrink:0">
-            <div>
-              <strong style="color:var(--text)">Deepak Verma</strong>
-              <div style="font-size:12px;color:var(--muted)">Subscriber since 2025 &bull; Central Greens</div>
+    <!-- Service Categories Grid -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Comprehensive Services</span>
+          <h2>Everything your modern connected home demands</h2>
+          <p>Engineered for high performance, consistent speeds, and uncompromised entertainment clarity.</p>
+        </div>
+
+        <div class="grid-4">
+          <!-- Service 1 -->
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1000&q=85"
+              alt="High speed pure optical fiber broadband">
+            <div class="card-body">
+              <span class="badge badge-primary" style="margin-bottom:8px">100% FTTH</span>
+              <h3>Gigabit Fiber</h3>
+              <p>Direct underground optical fiber cables right to your living room. Symmetrical upload and download
+                speeds up to 1 Gbps.</p>
             </div>
+          </article>
+
+          <!-- Service 2 -->
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=1000&q=85"
+              alt="4K Digital Cable Television with set-top box">
+            <div class="card-body">
+              <span class="badge badge-success" style="margin-bottom:8px">350+ Channels</span>
+              <h3>Digital 4K Cable TV</h3>
+              <p>Access live sports in 4K 60fps, blockbuster cinemas, multilingual regional feeds, and 50 hours of cloud
+                recording.</p>
+            </div>
+          </article>
+
+          <!-- Service 3 -->
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1606904825846-647eb07f5be2?auto=format&fit=crop&w=1000&q=85"
+              alt="Wi-Fi 6 router and whole home wireless coverage">
+            <div class="card-body">
+              <span class="badge badge-primary" style="margin-bottom:8px">Zero Dead Zones</span>
+              <h3>Smart Wi-Fi 6 Mesh</h3>
+              <p>Dual-band Wi-Fi 6 technology capable of connecting 60+ devices simultaneously without speed
+                degradation.</p>
+            </div>
+          </article>
+
+          <!-- Service 4 -->
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=85"
+              alt="Enterprise corporate leased lines and business broadband">
+            <div class="card-body">
+              <span class="badge badge-warning" style="margin-bottom:8px">Dedicated SLA</span>
+              <h3>Business Fiber</h3>
+              <p>Static IP allocations, 99.95% uptime service level agreement, and dedicated commercial priority
+                support.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Plans Section on Home Page -->
+    <section class="section alt" id="featured-plans">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Value-Packed Subscriptions</span>
+          <h2>Popular plans for every household</h2>
+          <p>No hidden rental charges, transparent monthly pricing, and free equipment included.</p>
+
+          <!-- Monthly / Annual Toggle Switcher -->
+          <div class="plan-switcher">
+            <button class="plan-switch-btn active" data-cycle="monthly" onclick="setBillingCycle('monthly')">Monthly
+              Billing</button>
+            <button class="plan-switch-btn" data-cycle="annual" onclick="setBillingCycle('annual')">Annual Plan (Save
+              15% 🎁)</button>
+          </div>
+        </div>
+
+        <div class="grid">
+          <!-- Plan 1 -->
+          <article class="card plain-card" data-monthly-price="499">
+            <span class="eyebrow">ESSENTIAL BROADBAND</span>
+            <div class="speed-tag">50 Mbps Symmetrical</div>
+            <h3>Essential Connect</h3>
+            <div class="price">₹499<small> / month*</small></div>
+            <p>Great for students, light streaming, video conferences, and everyday browsing on multiple mobile phones.
+            </p>
+
+            <div class="ott-badges">
+              <span class="ott-chip">Unlimited Data</span>
+              <span class="ott-chip">Free Wi-Fi Router</span>
+            </div>
+
+            <ul class="list">
+              <li>50 Mbps symmetrical upload &amp; download</li>
+              <li>Truly unlimited high-speed data</li>
+              <li>Single-band optical ONT router free</li>
+              <li>Sub-15ms local gaming ping</li>
+              <li>Cable TV add-on available at ₹150/mo</li>
+            </ul>
+            <a class="btn secondary" href="signup.html?plan=essential50">Choose Plan &rarr;</a>
+          </article>
+
+          <!-- Plan 2: Most Popular Combo -->
+          <article class="card plain-card featured" data-monthly-price="799">
+            <span class="featured-ribbon">MOST POPULAR</span>
+            <span class="eyebrow">ALL-IN-ONE COMBO</span>
+            <div class="speed-tag" style="background:var(--primary-light);color:var(--primary)">100 Mbps + 180 Channels
+            </div>
+            <h3>Family Plus Combo</h3>
+            <div class="price">₹799<small> / month*</small></div>
+            <p>Our top household recommendation: high-speed fiber internet and a full package of HD cable entertainment.
+            </p>
+
+            <div class="ott-badges">
+              <span class="ott-chip">Disney+ Hotstar</span>
+              <span class="ott-chip">SonyLIV</span>
+              <span class="ott-chip">Zee5</span>
+            </div>
+
+            <ul class="list">
+              <li>100 Mbps pure optical FTTH fiber</li>
+              <li>180+ Digital Cable TV channels (55 HD)</li>
+              <li>3 Premium OTT streaming subscriptions</li>
+              <li>Dual-band Wi-Fi 6 Gigabit Router included</li>
+              <li>Zero installation fee on annual subscriptions</li>
+            </ul>
+            <a class="btn" href="signup.html?plan=familyplus100">Get Family Plus &rarr;</a>
+          </article>
+
+          <!-- Plan 3 -->
+          <article class="card plain-card" data-monthly-price="1299">
+            <span class="eyebrow">TURBO ENTERTAINMENT</span>
+            <div class="speed-tag">200 Mbps + 250 Channels</div>
+            <h3>Ultra Entertainment</h3>
+            <div class="price">₹1,299<small> / month*</small></div>
+            <p>Designed for competitive gaming, multi-screen 4K streaming, home offices, and sports enthusiasts.</p>
+
+            <div class="ott-badges">
+              <span class="ott-chip">6 OTT Apps</span>
+              <span class="ott-chip">4K Android Box</span>
+              <span class="ott-chip">All Sports 4K</span>
+            </div>
+
+            <ul class="list">
+              <li>200 Mbps gigabit-grade symmetrical speeds</li>
+              <li>250+ Digital Cable TV channels (80 HD)</li>
+              <li>Android 4K Smart Box with Google Voice remote</li>
+              <li>6 OTT apps including Disney+, SonyLIV, Zee5</li>
+              <li>Sub-8ms latency &amp; VIP priority technician response</li>
+            </ul>
+            <a class="btn secondary" href="signup.html?plan=ultra200">Choose Plan &rarr;</a>
+          </article>
+        </div>
+
+        <div style="text-align:center;margin-top:36px">
+          <a class="btn secondary" href="plans.html">Compare All Fiber &amp; TV Plans &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Coverage Quick Strip -->
+    <section class="section">
+      <div class="container">
+        <div class="banner">
+          <div>
+            <h2>Check fiber availability in your locality</h2>
+            <p>Our underground FTTH ring is expanding across major urban sectors and townships. Verify your address
+              today.</p>
+          </div>
+          <div class="banner-actions" style="display:flex;gap:12px;flex-wrap:wrap">
+            <a class="btn" style="background:#ffffff;color:#0f172a !important" href="coverage.html">Check Coverage Map
+              &rarr;</a>
+            <a class="btn secondary"
+              style="border-color:rgba(255,255,255,0.3);color:#ffffff !important;background:transparent"
+              href="coverage.html#request-coverage">Request My Colony</a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FAQs on Home1 -->
-  <section class="section alt">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Clear Answers</span>
-        <h2>Frequently asked questions</h2>
-        <p>Everything you need to know before connecting.</p>
+    <!-- Why Choose ConnectWave: 6 Value Pillars -->
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">The ConnectWave Advantage</span>
+          <h2>Why thousands trust ConnectWave every day</h2>
+          <p>Built with enterprise infrastructure to deliver reliable home entertainment and internet.</p>
+        </div>
+
+        <div class="grid">
+          <div class="card" style="padding:28px">
+            <div class="feature-icon">⚡</div>
+            <h3>100% Symmetrical Speeds</h3>
+            <p>Unlike copper or coaxial-only connections, our optical fiber delivers matching upload and download speeds
+              so video conferences and gaming never stutter.</p>
+          </div>
+
+          <div class="card" style="padding:28px">
+            <div class="feature-icon">🛡️</div>
+            <h3>Underground Optical Ring</h3>
+            <p>Our pure underground fiber rings are shielded from heavy rain, winds, and accidental street wire cuts,
+              ensuring a reliable 99.98% uptime SLA.</p>
+          </div>
+
+          <div class="card" style="padding:28px">
+            <div class="feature-icon">📺</div>
+            <h3>Hybrid 4K Smart Cable Box</h3>
+            <p>Switch seamlessly between broadcast cable television and your favourite streaming apps on one smart box
+              with a single voice remote control.</p>
+          </div>
+
+          <div class="card" style="padding:28px">
+            <div class="feature-icon">⏱️</div>
+            <h3>4-Hour Rapid Field Response</h3>
+            <p>Local technician hubs located in every active postal zone. When you raise a service request, a technician
+              is assigned to your door within 4 hours.</p>
+          </div>
+
+          <div class="card" style="padding:28px">
+            <div class="feature-icon">💳</div>
+            <h3>Transparent Billing</h3>
+            <p>No hidden modem security fees, no surprise rental hikes, and zero cancellation penalties. What you see is
+              what you pay.</p>
+          </div>
+
+          <div class="card" style="padding:28px">
+            <div class="feature-icon">📱</div>
+            <h3>Self-Care Subscriber Portal</h3>
+            <p>Pay your bills via UPI with instant downloadable receipts, track high-speed data usage, and raise service
+              complaints 24/7 without waiting on hold.</p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="faq">
-        <details open>
-          <summary>How fast can I get a new connection installed?</summary>
-          <p>In all active fiber zones, standard installation is completed within 24 to 48 hours of booking. Our field engineer brings the pre-configured Wi-Fi 6 ONT router and set-top box, performs optical splicing, and tests bandwidth in your presence.</p>
-        </details>
-        <details>
-          <summary>Is standard installation really free?</summary>
-          <p>Yes! Free installation applies when you subscribe to any 6-month or 12-month billing plan. On monthly plans, a nominal one-time technician setup fee of ₹500 covers indoor cabling and optical router setup.</p>
-        </details>
-        <details>
-          <summary>Can I keep my existing television and cables?</summary>
-          <p>Yes. Our 4K digital cable set-top box connects seamlessly to any television via standard HDMI or AV cables. We also provide full backward compatibility with non-smart TVs.</p>
-        </details>
-        <details>
-          <summary>How do I pay my bill or raise a complaint?</summary>
-          <p>You can pay bills in 1 click or raise a service ticket through the <a href="dashboard.html" style="color:var(--primary);font-weight:750">Subscriber Dashboard</a> using UPI, Cards, or NetBanking with zero transaction charges.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- Ready to Connect Banner -->
-  <section class="section">
-    <div class="container">
-      <div class="banner">
+    <!-- Entertainment Showcase (Cable TV & OTT Bouquets) -->
+    <section class="section">
+      <div class="container two-col">
+        <img src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?auto=format&fit=crop&w=1200&q=85"
+          alt="Family enjoying streaming movies and cable television sports in living room">
         <div>
-          <h2>Ready for high-speed fiber and crystal-clear TV?</h2>
-          <p>Join over 150,000 households enjoying uncompromised speeds and 24/7 care.</p>
-        </div>
-        <a class="btn" style="background:#ffffff;color:#0f172a !important" href="signup.html">Book Free Installation &rarr;</a>
-      </div>
-    </div>
-  </section>
-</main>
-
-<!-- Footer (Identical Brand Name with Navbar) -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand-wrap">
-        <a class="brand" href="index.html">
-          <span class="logo">C</span>
-          <span>Connect<span style="color:var(--accent)">Wave</span></span>
-        </a>
-        <p>Bringing high-speed gigabit fiber broadband and digital 4K cable TV together for homes and businesses.</p>
-        <div class="footer-social">
-          <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
-          </a>
-          <a href="https://x.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="X (Twitter)">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-          </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.65 1.65 0 1 0 0-3.3 1.65 1.65 0 0 0 0 3.3m1.4 9.74v-8.37H5.06v8.37z"/></svg>
-          </a>
-          <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="YouTube">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-          </a>
+          <span class="eyebrow">Entertainment for Everyone</span>
+          <h2>Over 350 channels and all top streaming apps in one place.</h2>
+          <p class="lead">
+            Never fight over the remote again. ConnectWave bundles high-definition cable channels with premium digital
+            streaming.
+          </p>
+          <ul class="list">
+            <li><strong>Live Sports in 4K:</strong> Star Sports, Sony Sports, and Ten HD broadcasting cricket, football,
+              tennis, and F1.</li>
+            <li><strong>Cinema &amp; Series:</strong> Dedicated movie bouquets in English, Hindi, Tamil, Telugu, and
+              regional languages.</li>
+            <li><strong>Kids &amp; Learning:</strong> Disney Channel, Cartoon Network, Discovery Science, and National
+              Geographic.</li>
+            <li><strong>Cloud DVR &amp; Catch-Up:</strong> Pause live TV or catch up on episodes broadcast within the
+              past 7 days.</li>
+          </ul>
+          <div style="display:flex;gap:12px;margin-top:20px;flex-wrap:wrap">
+            <a class="btn" href="plans.html?cat=tv">Browse TV Packages &rarr;</a>
+            <a class="btn secondary" href="services.html">Explore Services</a>
+          </div>
         </div>
       </div>
-      <div>
-        <h4>Explore Plans</h4>
-        <a href="plans.html">Broadband plans</a>
-        <a href="services.html">TV packages</a>
-        <a href="coverage.html">Coverage map</a>
-        <a href="about.html">About us</a>
+    </section>
+
+    <!-- Dedicated Subscriber Portal Spotlight Card -->
+    <section class="section alt">
+      <div class="container two-col">
+        <div>
+          <span class="eyebrow">Subscriber Dashboard Portal</span>
+          <h2>Total control over your connection, anytime.</h2>
+          <p class="lead">
+            ConnectWave subscribers can manage their account with our feature-rich self-care dashboard.
+          </p>
+          <ul class="list">
+            <li><strong>1-Click Bill Payments:</strong> Instant receipts via UPI, GPay, Credit/Debit cards, and
+              NetBanking.</li>
+            <li><strong>Live Data Consumption:</strong> Real-time tracking of high-speed bandwidth with renewal
+              countdown.</li>
+            <li><strong>Raise &amp; Track Complaints:</strong> Live engineer dispatch tracking from logging to
+              resolution.</li>
+            <li><strong>Instant Speed Upgrades:</strong> Boost bandwidth or add sports channels in seconds.</li>
+          </ul>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:22px">
+            <a class="btn" href="dashboard.html">Launch Subscriber Dashboard &rarr;</a>
+            <a class="btn secondary" href="login.html">Login to Portal</a>
+          </div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=1200&q=85"
+          alt="Modern connected smart home with broadband connectivity">
       </div>
-      <div>
-        <h4>Customer Care</h4>
-        <a href="dashboard.html">Subscriber dashboard</a>
-        <a href="support.html">Help centre</a>
-        <a href="contact.html#support">FAQs &amp; Support</a>
-        <a href="contact.html">Contact us</a>
+    </section>
+
+    <!-- Customer Testimonials -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Subscriber Reviews</span>
+          <h2>Loved by 150,000+ homes and businesses</h2>
+          <p>Real stories from verified ConnectWave subscribers across the city.</p>
+        </div>
+
+        <div class="grid">
+          <div class="card" style="padding:28px">
+            <div style="color:#f59e0b;font-size:18px;margin-bottom:10px">★★★★★</div>
+            <p style="font-style:italic;color:var(--text);margin-bottom:16px">
+              "Switching to ConnectWave Family Plus was the best decision for our household. The 100 Mbps fiber speed is
+              rock solid even when my husband and I both work remotely while our children stream 4K cartoons."
+            </p>
+            <div style="display:flex;align-items:center;gap:12px">
+              <img
+                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&h=120&q=80"
+                alt="Rohit &amp; Kavita Sharma"
+                style="width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--primary);flex-shrink:0">
+              <div>
+                <strong style="color:var(--text)">Rohit &amp; Kavita Sharma</strong>
+                <div style="font-size:12px;color:var(--muted)">Subscriber since 2024 &bull; Sector 14</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="padding:28px">
+            <div style="color:#f59e0b;font-size:18px;margin-bottom:10px">★★★★★</div>
+            <p style="font-style:italic;color:var(--text);margin-bottom:16px">
+              "The 4-hour technician turnaround is 100% real. When our internal cable got pinched during painting, I
+              raised a ticket on the dashboard and an engineer was at my apartment in 2 hours. Superb service!"
+            </p>
+            <div style="display:flex;align-items:center;gap:12px">
+              <img
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&h=120&q=80"
+                alt="Ananya Mukherjee"
+                style="width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--accent);flex-shrink:0">
+              <div>
+                <strong style="color:var(--text)">Ananya Mukherjee</strong>
+                <div style="font-size:12px;color:var(--muted)">Subscriber since 2023 &bull; IT Tech Corridor</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="padding:28px">
+            <div style="color:#f59e0b;font-size:18px;margin-bottom:10px">★★★★★</div>
+            <p style="font-style:italic;color:var(--text);margin-bottom:16px">
+              "As an online streamer and competitive gamer, latency is everything. ConnectWave gives me 7ms ping on
+              local servers and equal 200 Mbps upload speed. Zero packet loss, ever."
+            </p>
+            <div style="display:flex;align-items:center;gap:12px">
+              <img
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&h=120&q=80"
+                alt="Deepak Verma"
+                style="width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--warning);flex-shrink:0">
+              <div>
+                <strong style="color:var(--text)">Deepak Verma</strong>
+                <div style="font-size:12px;color:var(--muted)">Subscriber since 2025 &bull; Central Greens</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        <h4>Subscriber Services</h4>
-        <a href="dashboard.html">Pay bill online</a>
-        <a href="dashboard.html">Raise complaint</a>
-        <a href="login.html">Subscriber login</a>
-        <a href="signup.html">Create account</a>
+    </section>
+
+    <!-- FAQs on Home1 -->
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Clear Answers</span>
+          <h2>Frequently asked questions</h2>
+          <p>Everything you need to know before connecting.</p>
+        </div>
+
+        <div class="faq">
+          <details open>
+            <summary>How fast can I get a new connection installed?</summary>
+            <p>In all active fiber zones, standard installation is completed within 24 to 48 hours of booking. Our field
+              engineer brings the pre-configured Wi-Fi 6 ONT router and set-top box, performs optical splicing, and
+              tests bandwidth in your presence.</p>
+          </details>
+          <details>
+            <summary>Is standard installation really free?</summary>
+            <p>Yes! Free installation applies when you subscribe to any 6-month or 12-month billing plan. On monthly
+              plans, a nominal one-time technician setup fee of ₹500 covers indoor cabling and optical router setup.</p>
+          </details>
+          <details>
+            <summary>Can I keep my existing television and cables?</summary>
+            <p>Yes. Our 4K digital cable set-top box connects seamlessly to any television via standard HDMI or AV
+              cables. We also provide full backward compatibility with non-smart TVs.</p>
+          </details>
+          <details>
+            <summary>How do I pay my bill or raise a complaint?</summary>
+            <p>You can pay bills in 1 click or raise a service ticket through the <a href="dashboard.html"
+                style="color:var(--primary);font-weight:750">Subscriber Dashboard</a> using UPI, Cards, or NetBanking
+              with zero transaction charges.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ready to Connect Banner -->
+    <section class="section">
+      <div class="container">
+        <div class="banner">
+          <div>
+            <h2>Ready for high-speed fiber and crystal-clear TV?</h2>
+            <p>Join over 150,000 households enjoying uncompromised speeds and 24/7 care.</p>
+          </div>
+          <a class="btn" style="background:#ffffff;color:#0f172a !important" href="signup.html">Book Free Installation
+            &rarr;</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (Identical Brand Name with Navbar) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-wrap">
+          <a class="brand" href="index.html">
+            <span class="logo">C</span>
+            <span>Connect<span style="color:var(--accent)">Wave</span></span>
+          </a>
+          <p>Bringing high-speed gigabit fiber broadband and digital 4K cable TV together for homes and businesses.</p>
+          <div class="footer-social">
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link"
+              aria-label="Facebook">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z" />
+              </svg>
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="X (Twitter)">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-link"
+              aria-label="Instagram">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-link"
+              aria-label="LinkedIn">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.65 1.65 0 1 0 0-3.3 1.65 1.65 0 0 0 0 3.3m1.4 9.74v-8.37H5.06v8.37z" />
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-link"
+              aria-label="YouTube">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4>Explore Plans</h4>
+          <a href="plans.html">Broadband plans</a>
+          <a href="services.html">TV packages</a>
+          <a href="coverage.html">Coverage map</a>
+          <a href="about.html">About us</a>
+        </div>
+        <div>
+          <h4>Customer Care</h4>
+          <a href="dashboard.html">Subscriber dashboard</a>
+          <a href="support.html">Help centre</a>
+          <a href="contact.html#support">FAQs &amp; Support</a>
+          <a href="contact.html">Contact us</a>
+        </div>
+        <div>
+          <h4>Subscriber Services</h4>
+          <a href="dashboard.html">Pay bill online</a>
+          <a href="dashboard.html">Raise complaint</a>
+          <a href="login.html">Subscriber login</a>
+          <a href="signup.html">Create account</a>
+        </div>
+      </div>
+      <div class="copyright">
+        <span>&copy; 2026 ConnectWave Communications. All rights reserved.</span>
+        <span>24/7 Helpline: 1800-555-0199 (Toll-Free)</span>
       </div>
     </div>
-    <div class="copyright">
-      <span>&copy; 2026 ConnectWave Communications. All rights reserved.</span>
-      <span>24/7 Helpline: 1800-555-0199 (Toll-Free)</span>
-    </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- Back to Top Button -->
-<button class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="Back to top">↑</button>
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="Back to top">↑</button>
 
-<script src="assets/app.js"></script>
+  <script src="assets/app.js"></script>
 </body>
+
 </html>
